@@ -1,0 +1,14 @@
+export type NavItem = {
+  name: string;
+  path: string;
+};
+
+export const NAV_LINKS: NavItem[] = [
+  { name: "Início", path: "/" },
+  { name: "Traslados", path: "/transfers" },
+  { name: "Frota", path: "/fleet" },
+  { name: "Serviços de Bordo", path: "/onboard" },
+  { name: "Sobre Nós", path: "/about" },
+  { name: "Depoimentos", path: "/reviews" },
+  { name: "Contato", path: "/contact" },
+];
