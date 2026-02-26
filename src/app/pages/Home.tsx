@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Shield, Clock, Languages, Award, ChevronRight, Star, Car, Briefcase, Plane, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { Shield, Clock, Award, ChevronRight, Star, Car, Briefcase, Plane, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
@@ -11,7 +11,7 @@ export function Home() {
   const features = [
     { icon: <Shield className="text-[#D4AF37]" />, title: "Viagem Segura", desc: "Protocolos rigorosos de segurança e rastreamento." },
     { icon: <Clock className="text-[#D4AF37]" />, title: "Serviço 24/7", desc: "Sempre disponível para seus voos matinais ou eventos tardios." },
-    { icon: <Languages className="text-[#D4AF37]" />, title: "Multilíngue", desc: "Motoristas fluentes em Inglês, Português e Espanhol." },
+    { icon: <Shield className="text-[#D4AF37]" />, title: "Discrição Total", desc: "Atendimento reservado para clientes, executivos e famílias." },
     { icon: <Award className="text-[#D4AF37]" />, title: "Qualidade de Luxo", desc: "Pontualidade e serviço de bordo premium como padrão." },
   ];
 
