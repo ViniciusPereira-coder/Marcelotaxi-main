@@ -6,6 +6,8 @@ import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 export function Home() {
+  const [heroPointer, setHeroPointer] = React.useState({ x: 50, y: 50 });
+
   const features = [
     { icon: <Shield className="text-[#D4AF37]" />, title: "Viagem Segura", desc: "Protocolos rigorosos de segurança e rastreamento." },
     { icon: <Clock className="text-[#D4AF37]" />, title: "Serviço 24/7", desc: "Sempre disponível para seus voos matinais ou eventos tardios." },
@@ -16,7 +18,15 @@ export function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden">
+      <section
+        className="relative h-[90vh] flex items-center overflow-hidden"
+        onMouseMove={(event) => {
+          const rect = event.currentTarget.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+          setHeroPointer({ x, y });
+        }}
+      >
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1764089859665-7d417664c5de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBzZWRhbiUyMGJsYWNrJTIwY2FyJTIwY2hhdWZmZXVyfGVufDF8fHx8MTc3MTY5NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080"
@@ -24,6 +34,13 @@ export function Home() {
             alt="Carro Executivo de Luxo"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+          <motion.div
+            className="absolute inset-0"
+            animate={{
+              background: `radial-gradient(circle at ${heroPointer.x}% ${heroPointer.y}%, rgba(212, 175, 55, 0.28), transparent 45%)`,
+            }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
