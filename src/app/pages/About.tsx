@@ -16,7 +16,7 @@ export function About() {
             Sobre a <span className="text-[#D4AF37]">MarceloTaxi</span>
           </motion.h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Um legado de excelência em transporte executivo particular em São Paulo desde 2010.
+            Experiência real de taxista em São Paulo, com atendimento particular para aeroporto, cidade e viagens.
           </p>
         </div>
       </section>
@@ -28,12 +28,12 @@ export function About() {
               <div className="inline-block px-4 py-1 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase rounded-full mb-6">
                 Nossa Herança
               </div>
-              <h2 className="text-4xl font-bold mb-8">Liderando o Caminho em Traslados de Luxo</h2>
+              <h2 className="text-4xl font-bold mb-8">Sobre o Serviço de Táxi e Traslados Particulares</h2>
               <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Fundada pelo Marcelo com um único sedan de luxo e a visão de redefinir o que significa "traslado particular" no Brasil, a MarceloTaxi cresceu e se tornou uma frota executiva de elite que atende a milhares de clientes internacionais e locais.
+                A MarceloTaxi nasceu com o trabalho diário nas ruas de São Paulo. O foco sempre foi simples: oferecer traslado e corridas de táxi com segurança, pontualidade e atenção ao cliente, seja para moradores, turistas ou empresas.
               </p>
               <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                Nossa missão sempre foi simples: fornecer um nível de serviço que corresponda aos padrões dos melhores hotéis e companhias aéreas do mundo. Hoje, temos orgulho de ser o parceiro de confiança para corporações multinacionais, embaixadas e viajantes de luxo que visitam São Paulo.
+                Com conhecimento de rota, trânsito e horários da cidade, planejamos cada viagem para reduzir atrasos e garantir tranquilidade. Atendemos aeroportos, hotéis, eventos, consultas e deslocamentos intermunicipais com suporte direto no WhatsApp.
               </p>
               
               <div className="grid grid-cols-2 gap-8">

@@ -11,7 +11,7 @@ export function Home() {
   const features = [
     { icon: <Shield className="text-[#D4AF37]" />, title: "Viagem Segura", desc: "Protocolos rigorosos de segurança e rastreamento." },
     { icon: <Clock className="text-[#D4AF37]" />, title: "Serviço 24/7", desc: "Sempre disponível para seus voos matinais ou eventos tardios." },
-    { icon: <Shield className="text-[#D4AF37]" />, title: "Discrição Total", desc: "Atendimento reservado para clientes, executivos e famílias." },
+    { icon: <Car className="text-[#D4AF37]" />, title: "Táxi Particular", desc: "Atendimento direto com taxista experiente para viagens urbanas e intermunicipais." },
     { icon: <Award className="text-[#D4AF37]" />, title: "Qualidade de Luxo", desc: "Pontualidade e serviço de bordo premium como padrão." },
   ];
 
@@ -29,9 +29,9 @@ export function Home() {
       >
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1764089859665-7d417664c5de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBzZWRhbiUyMGJsYWNrJTIwY2FyJTIwY2hhdWZmZXVyfGVufDF8fHx8MTc3MTY5NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80"
             className="w-full h-full object-cover"
-            alt="Carro Executivo de Luxo"
+            alt="Chevrolet Spin branca para transporte de passageiros"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
           <motion.div
@@ -135,10 +135,10 @@ export function Home() {
                 desc: "Pickups pontuais em GRU, CGH e VCP com serviço de recepção." 
               },
               { 
-                title: "Logística Corporativa", 
+                title: "Viagens e Corridas Urbanas", 
                 icon: <Briefcase size={40} className="text-[#D4AF37]" />, 
-                img: "https://images.unsplash.com/photo-1696992443043-7d63e521b91c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGF1ZmZldXIlMjBpbiUyMHN1aXQlMjBvcGVuaW5nJTIwY2FyJTIwZG9vciUyMGx1eHVyeSUyMHNlcnZpY2V8ZW58MXx8fHwxNzcxNjk0MTMyfDA",
-                desc: "Transporte eficiente e discreto para executivos e convidados VIP." 
+                img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
+                desc: "Corridas para trabalho, consultas, compromissos e viagens com atendimento de taxista profissional." 
               },
               { 
                 title: "Frota Executiva", 
