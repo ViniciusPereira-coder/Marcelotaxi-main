@@ -9,7 +9,7 @@ export function Home() {
   const features = [
     { icon: <Shield className="text-[#D4AF37]" />, title: "Viagem Segura", desc: "Protocolos rigorosos de segurança e rastreamento." },
     { icon: <Clock className="text-[#D4AF37]" />, title: "Serviço 24/7", desc: "Sempre disponível para seus voos matinais ou eventos tardios." },
-    { icon: <Award className="text-[#D4AF37]" />, title: "Atendimento Premium", desc: "Equipe treinada para oferecer um serviço discreto, cordial e eficiente." },
+    { icon: <Briefcase className="text-[#D4AF37]" />, title: "Transportamos o que é mais valioso", desc: "Seu tempo, sua segurança e sua tranquilidade em cada trajeto." },
     { icon: <Award className="text-[#D4AF37]" />, title: "Qualidade de Luxo", desc: "Pontualidade e serviço de bordo premium como padrão." },
   ];
 
