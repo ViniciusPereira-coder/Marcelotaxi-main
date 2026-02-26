@@ -205,7 +205,7 @@ export function Home() {
                 href={COMPANY_LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white px-10 py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 transition-transform"
+                className="bg-black text-[#D4AF37] border-2 border-black px-10 py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:bg-black/90 transition-colors"
               >
                 <MessageCircle size={24} />
                 CHAT WHATSAPP
