@@ -11,7 +11,7 @@ export const COMPANY_INFO = {
 } as const;
 
 export const COMPANY_LINKS = {
-  whatsapp: `https://wa.me/${COMPANY_INFO.phoneDigits}`,
+  whatsapp: `https://api.whatsapp.com/send?phone=${COMPANY_INFO.phoneDigits}`,
   phone: `tel:+${COMPANY_INFO.phoneDigits}`,
   email: `mailto:${COMPANY_INFO.email}`,
   instagram: "#",
