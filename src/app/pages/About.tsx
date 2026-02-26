@@ -50,9 +50,9 @@ export function About() {
             <div className="relative">
               <div className="rounded-[40px] overflow-hidden">
                 <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1696992443043-7d63e521b91c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg" 
+                  src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80" 
                   className="w-full h-full object-cover" 
-                  alt="Equipe MarceloTaxi" 
+                  alt="Chevrolet Spin branca usada no serviço de traslado" 
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-[#0A0A0A] p-8 border border-[#D4AF37]/20 rounded-3xl hidden md:block">
