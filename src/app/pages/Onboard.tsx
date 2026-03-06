@@ -100,7 +100,7 @@ export function Onboard() {
                 {[
                   { title: "Rastreamento de Voo", desc: "Acompanhamos seu pouso em tempo real para ajustar qualquer atraso." },
                   { title: "Assistência Porta a Porta", desc: "Ajuda com bagagens desde a sua porta até o porta-malas e vice-versa." },
-                  { title: "Motoristas Bilíngues", desc: "Comunicação clara em Inglês para nossos clientes internacionais." },
+                  { title: "Pontualidade Garantida", desc: "Planejamento cuidadoso para garantir chegadas no horário combinado." },
                   { title: "Ambiente Sanitizado", desc: "Álcool em gel disponível para passageiros em todos os veículos." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">

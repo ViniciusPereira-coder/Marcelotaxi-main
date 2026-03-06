@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Shield, Clock, Languages, Award, ChevronRight, Star, Car, Briefcase, Plane, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { Shield, Clock, Award, ChevronRight, Star, Car, Briefcase, Plane, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
@@ -9,7 +9,7 @@ export function Home() {
   const features = [
     { icon: <Shield className="text-[#D4AF37]" />, title: "Viagem Segura", desc: "Protocolos rigorosos de segurança e rastreamento." },
     { icon: <Clock className="text-[#D4AF37]" />, title: "Serviço 24/7", desc: "Sempre disponível para seus voos matinais ou eventos tardios." },
-    { icon: <Languages className="text-[#D4AF37]" />, title: "Multilíngue", desc: "Motoristas fluentes em Inglês, Português e Espanhol." },
+    { icon: <Briefcase className="text-[#D4AF37]" />, title: "Transportamos o que é mais valioso", desc: "Seu tempo, sua segurança e sua tranquilidade em cada trajeto." },
     { icon: <Award className="text-[#D4AF37]" />, title: "Qualidade de Luxo", desc: "Pontualidade e serviço de bordo premium como padrão." },
   ];
 
@@ -205,7 +205,7 @@ export function Home() {
                 href={COMPANY_LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white px-10 py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 transition-transform"
+                className="bg-black text-[#D4AF37] border-2 border-black px-10 py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:bg-black/90 transition-colors"
               >
                 <MessageCircle size={24} />
                 CHAT WHATSAPP
