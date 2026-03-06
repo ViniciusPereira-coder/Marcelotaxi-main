@@ -16,13 +16,13 @@ export function Fleet() {
       bestFor: "Viajantes de negócios individuais, casais, traslados de aeroporto."
     },
     {
-      name: "Minivan Premium",
-      model: "Mercedes Classe V, Kia Carnival ou similar",
+      name: "Chevrolet Spin 2023",
+      model: "Chevrolet Spin LTZ 2023 (Branca)",
       capacity: "6-7 Passageiros",
       luggage: "5 Malas Grandes",
-      image: "https://images.unsplash.com/photo-1722816385770-8640d490117b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
+      image: "https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80",
       features: ["Interior espaçoso", "Portas deslizantes", "Assentos configuráveis", "Espaço extra para as pernas"],
-      bestFor: "Famílias, pequenos grupos, equipes corporativas com bagagem."
+      bestFor: "Famílias, viagens para aeroporto, corridas urbanas e trajetos intermunicipais."
     }
   ];
 

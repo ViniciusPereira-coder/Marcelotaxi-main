@@ -1,29 +1,46 @@
 import React from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Shield, Clock, Languages, Award, ChevronRight, Star, Car, Briefcase, Plane, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
+import { Shield, Clock, Award, ChevronRight, Star, Car, Briefcase, Plane, MessageCircle, Phone, CheckCircle2 } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 export function Home() {
+  const [heroPointer, setHeroPointer] = React.useState({ x: 50, y: 50 });
+
   const features = [
     { icon: <Shield className="text-[#D4AF37]" />, title: "Viagem Segura", desc: "Protocolos rigorosos de segurança e rastreamento." },
     { icon: <Clock className="text-[#D4AF37]" />, title: "Serviço 24/7", desc: "Sempre disponível para seus voos matinais ou eventos tardios." },
-    { icon: <Languages className="text-[#D4AF37]" />, title: "Multilíngue", desc: "Motoristas fluentes em Inglês, Português e Espanhol." },
+    { icon: <Car className="text-[#D4AF37]" />, title: "Táxi Particular", desc: "Atendimento direto com taxista experiente para viagens urbanas e intermunicipais." },
     { icon: <Award className="text-[#D4AF37]" />, title: "Qualidade de Luxo", desc: "Pontualidade e serviço de bordo premium como padrão." },
   ];
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden">
+      <section
+        className="relative h-[90vh] flex items-center overflow-hidden"
+        onMouseMove={(event) => {
+          const rect = event.currentTarget.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+          setHeroPointer({ x, y });
+        }}
+      >
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1764089859665-7d417664c5de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxleGVjdXRpdmUlMjBzZWRhbiUyMGJsYWNrJTIwY2FyJTIwY2hhdWZmZXVyfGVufDF8fHx8MTc3MTY5NDEzMXww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1400&q=80"
             className="w-full h-full object-cover"
-            alt="Carro Executivo de Luxo"
+            alt="Chevrolet Spin branca para transporte de passageiros"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+          <motion.div
+            className="absolute inset-0"
+            animate={{
+              background: `radial-gradient(circle at ${heroPointer.x}% ${heroPointer.y}%, rgba(212, 175, 55, 0.28), transparent 45%)`,
+            }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -38,10 +55,18 @@ export function Home() {
               Serviço 5 Estrelas em São Paulo
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-              Traslado Particular <span className="text-[#D4AF37]">Executivo</span> em São Paulo
+              <motion.span
+                className="bg-gradient-to-r from-[#D4AF37] via-[#F7D875] to-[#D4AF37] bg-[length:200%_100%] bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(212,175,55,0.55)] inline-block"
+                initial={{ backgroundPosition: "0% 50%" }}
+                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                whileHover={{ scale: 1.04, rotate: -1 }}
+              >
+                Transportamos o que é mais valioso
+              </motion.span>
             </h1>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-lg">
-              Experimente o auge do conforto e segurança com nosso serviço premium de motorista. Aeroportos, eventos e transporte corporativo.
+              Em cada viagem, protegemos seu tempo, sua tranquilidade e sua reputação com atendimento executivo impecável para aeroportos, eventos e transporte corporativo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -110,10 +135,10 @@ export function Home() {
                 desc: "Pickups pontuais em GRU, CGH e VCP com serviço de recepção." 
               },
               { 
-                title: "Logística Corporativa", 
+                title: "Viagens e Corridas Urbanas", 
                 icon: <Briefcase size={40} className="text-[#D4AF37]" />, 
-                img: "https://images.unsplash.com/photo-1696992443043-7d63e521b91c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGF1ZmZldXIlMjBpbiUyMHN1aXQlMjBvcGVuaW5nJTIwY2FyJTIwZG9vciUyMGx1eHVyeSUyMHNlcnZpY2V8ZW58MXx8fHwxNzcxNjk0MTMyfDA",
-                desc: "Transporte eficiente e discreto para executivos e convidados VIP." 
+                img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80",
+                desc: "Corridas para trabalho, consultas, compromissos e viagens com atendimento de taxista profissional." 
               },
               { 
                 title: "Frota Executiva", 
