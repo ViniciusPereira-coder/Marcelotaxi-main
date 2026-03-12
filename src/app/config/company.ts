@@ -4,8 +4,8 @@ export const COMPANY_INFO = {
   brandTagline: "TAXI PREMIUM",
   legalName: "MarceloTaxi",
   city: "São Paulo",
-  phoneDisplay: "+55 11 99999-9999",
-  phoneDigits: "5511999999999",
+  phoneDisplay: "+55 11 92206-1435",
+  phoneDigits: "5511922061435",
   email: "contato@marcelotaxi.com.br",
   cnpj: "00.000.000/0001-00",
 } as const;
