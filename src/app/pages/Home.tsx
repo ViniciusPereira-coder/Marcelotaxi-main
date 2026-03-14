@@ -65,12 +65,10 @@ const services = [
 ];
 
 const comfortItems = [
-  "Agua cortesia",
-  "Wi-Fi de alta velocidade",
-  "Carregadores de celular",
+  "Água cortesia",
   "Ar-condicionado digital",
-  "Atendimento discreto",
-  "Ponto de embarque inteligente",
+  "Água, sucos e bebidas",
+  "Snacks e cereais a bordo",
 ];
 
 export function Home() {
@@ -114,8 +112,8 @@ export function Home() {
                   pontualidade e confianca
                 </span>
               </h1>
-              <p className="mx-auto mb-8 max-w-2xl rounded-2xl border border-[#D9B44A]/35 bg-black/40 px-5 py-4 text-lg font-black leading-tight text-[#f7e5b6] md:text-xl">
-                Transportamos o que ha de mais valioso
+              <p className="mx-auto mb-8 max-w-2xl rounded-2xl border border-[#D9B44A]/35 bg-black/40 px-5 py-4 text-lg font-['Sora'] font-extrabold uppercase leading-tight tracking-[0.08em] text-[#f7e5b6] drop-shadow-[0_2px_10px_rgba(217,180,74,0.25)] md:text-xl">
+                Transportamos o que há de mais valioso
               </p>
 
               <div className="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -265,7 +263,7 @@ export function Home() {
             <div className="relative z-10 text-center">
               <h2 className="mb-6 text-4xl font-black leading-tight md:text-6xl">Pronto para o proximo traslado?</h2>
               <p className="mx-auto mb-10 max-w-3xl text-lg font-semibold opacity-85 md:text-xl">
-                Receba confirmacao rapida no WhatsApp e reserve sua operacao com atendimento profissional em Sao Paulo.
+                Receba confirmacao rapida no WhatsApp e reserve sua viagem com atendimento profissional em Sao Paulo.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a

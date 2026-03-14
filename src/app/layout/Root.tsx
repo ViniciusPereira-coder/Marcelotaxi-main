@@ -258,7 +258,7 @@ export function Root() {
 
           <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-7 md:flex-row">
             <p className="text-xs text-slate-400">
-              © {currentYear} {COMPANY_INFO.legalName}. Todos os direitos reservados. CNPJ: {COMPANY_INFO.cnpj}
+              © {currentYear} {COMPANY_INFO.legalName}. Todos os direitos reservados.
             </p>
             <div className="flex gap-5 text-xs text-slate-400">
               <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Política de Privacidade</a>

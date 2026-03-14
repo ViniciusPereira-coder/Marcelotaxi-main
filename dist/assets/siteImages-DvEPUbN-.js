@@ -1,0 +1,1 @@
+const s="/assets/Congonhas%20airport-PuUx4pDP.jpg",a="/assets/taxi-e-aviao-CW5vbiJ7.png",o="/assets/Viagens%20de%20negocios-Ch7zCJE0.jpg",t="/assets/Frota%20de%20carro-CynJccmo.png",e="/assets/taxi%20na%20estrada-CGBpFPsp.png",n={hero:a,airport:s,corporate:o,fleet:t,service:e};export{n as S};
