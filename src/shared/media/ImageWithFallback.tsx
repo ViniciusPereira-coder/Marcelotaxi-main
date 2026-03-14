@@ -5,17 +5,39 @@ const ERROR_IMG_SRC =
 
 export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
   const [didError, setDidError] = useState(false);
-  const { src, alt, style, className, ...rest } = props;
+  const { src, alt, style, className, loading, decoding, ...rest } = props;
+
+  // Default to lazy loading and async decoding to reduce LCP/CLS impact.
+  const resolvedLoading = loading ?? "lazy";
+  const resolvedDecoding = decoding ?? "async";
 
   if (didError) {
     return (
       <div className={`inline-block bg-gray-100 text-center align-middle ${className ?? ""}`} style={style}>
         <div className="flex h-full w-full items-center justify-center">
-          <img src={ERROR_IMG_SRC} alt="Error loading image" {...rest} data-original-url={src} />
+          <img
+            src={ERROR_IMG_SRC}
+            alt="Error loading image"
+            loading={resolvedLoading}
+            decoding={resolvedDecoding}
+            {...rest}
+            data-original-url={src}
+          />
         </div>
       </div>
     );
   }
 
-  return <img src={src} alt={alt} className={className} style={style} {...rest} onError={() => setDidError(true)} />;
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      style={style}
+      loading={resolvedLoading}
+      decoding={resolvedDecoding}
+      {...rest}
+      onError={() => setDidError(true)}
+    />
+  );
 }

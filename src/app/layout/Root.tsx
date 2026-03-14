@@ -54,19 +54,19 @@ export function Root() {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium uppercase tracking-wide transition-colors hover:text-[#D4AF37] ${
-                    isActive ? "text-[#D4AF37]" : "text-gray-300"
+                  `menu-link text-sm font-medium uppercase tracking-wide transition-colors ${
+                    isActive ? "menu-link-active" : "text-gray-300"
                   }`
                 }
               >
                 {link.name}
               </NavLink>
             ))}
-            <a
-              href={COMPANY_LINKS.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full bg-[#D4AF37] px-6 py-2 text-sm font-bold text-black transition-colors hover:bg-[#B8860B]"
+              <a
+                href={COMPANY_LINKS.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+              className="whatsapp-cta flex items-center gap-2 rounded-full border border-transparent bg-[#D4AF37] px-6 py-2 text-sm font-bold text-black transition-colors"
             >
               <MessageCircle size={18} />
               WHATSAPP
@@ -105,8 +105,8 @@ export function Root() {
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) =>
-                    `text-2xl font-bold uppercase transition-colors hover:text-[#D4AF37] ${
-                      isActive ? "text-[#D4AF37]" : "text-white"
+                    `menu-link text-2xl font-bold uppercase transition-colors ${
+                      isActive ? "menu-link-active" : "text-white"
                     }`
                   }
                 >
@@ -123,7 +123,7 @@ export function Root() {
                   href={COMPANY_LINKS.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#D4AF37] py-4 text-center font-bold text-black"
+                  className="whatsapp-cta flex w-full items-center justify-center gap-2 rounded-xl border border-transparent bg-[#D4AF37] py-4 text-center font-bold text-black transition-colors"
                 >
                   <MessageCircle size={20} />
                   AGENDAR VIA WHATSAPP
@@ -156,7 +156,7 @@ export function Root() {
                 </div>
               </Link>
               <p className="text-sm leading-relaxed text-gray-400">
-                Transporte executivo em {COMPANY_INFO.city}. Conforto, seguranca e pontualidade para sua viagem.
+                Transporte executivo em {COMPANY_INFO.city}, com foco em conforto, pontualidade e atendimento profissional.
               </p>
               <div className="flex gap-4">
                 <a
@@ -188,28 +188,28 @@ export function Root() {
             </div>
 
             <div>
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Servicos</h4>
+              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Serviços</h4>
               <ul className="flex flex-col gap-4 text-sm text-gray-400">
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados Aeroporto</Link></li>
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados Aeroportuários</Link></li>
                 <li><Link to="/transfers" className="transition-colors hover:text-white">Transporte Corporativo</Link></li>
                 <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados para Praias</Link></li>
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Logistica de Eventos</Link></li>
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Logística de Eventos</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Areas Atendidas</h4>
+              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Áreas Atendidas</h4>
               <ul className="flex flex-col gap-4 text-sm text-gray-400">
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Sao Paulo (Capital)</li>
+                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> São Paulo (Capital)</li>
                 <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Aeroporto GRU (Guarulhos)</li>
                 <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Aeroporto CGH (Congonhas)</li>
                 <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Aeroporto VCP (Viracopos)</li>
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Alphaville e regiao central</li>
+                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Alphaville e região central</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Contato Rapido</h4>
+              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Contato Rápido</h4>
               <div className="flex flex-col gap-4 text-sm">
                 <a href={COMPANY_LINKS.phone} className="flex items-center gap-3 text-white transition-colors hover:text-[#D4AF37]">
                   <Phone size={18} className="text-[#D4AF37]" />
@@ -226,7 +226,7 @@ export function Root() {
                 </a>
                 <div className="flex items-center gap-3 text-gray-400">
                   <CheckCircle2 size={18} className="text-[#D4AF37]" />
-                  Disponivel 24/7
+                  Disponível 24/7
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@ export function Root() {
               © {currentYear} {COMPANY_INFO.legalName}. Todos os direitos reservados. CNPJ: {COMPANY_INFO.cnpj}
             </p>
             <div className="flex gap-6 text-xs text-gray-500">
-              <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Politica de Privacidade</a>
+              <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Política de Privacidade</a>
               <a href={COMPANY_LINKS.termsOfUse} className="transition-colors hover:text-white">Termos de Uso</a>
             </div>
           </div>

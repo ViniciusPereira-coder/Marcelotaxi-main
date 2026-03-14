@@ -2,6 +2,12 @@ import React from "react";
 import { motion } from "motion/react";
 import { Star, Quote, CheckCircle } from "lucide-react";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
+import avatarAna from "@/app/assets/avatars/avatar-ana.svg";
+import avatarDavid from "@/app/assets/avatars/avatar-david.svg";
+import avatarElena from "@/app/assets/avatars/avatar-elena.svg";
+import avatarMichael from "@/app/assets/avatars/avatar-michael.svg";
+import avatarRoberto from "@/app/assets/avatars/avatar-roberto.svg";
+import avatarSophia from "@/app/assets/avatars/avatar-sophia.svg";
 
 export function Reviews() {
   const testimonials = [
@@ -10,48 +16,48 @@ export function Reviews() {
       role: "CEO, Tech Horizon",
       location: "Reino Unido",
       rating: 5,
-      comment: "Marcelo oferece um nível de serviço que não vi em outro lugar em São Paulo. Profissional, pontual e o carro estava impecável. Como viajante de negócios, isso é exatamente o que eu preciso.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+      comment: "Marcelo oferece um nível de serviço raro em São Paulo. Sempre profissional, pontual e com o veículo impecável. Para quem viaja a negócios, faz toda a diferença.",
+      avatar: avatarDavid
     },
     {
       name: "Ana Beatriz Costa",
       role: "Coordenadora de Eventos",
       location: "São Paulo, Brasil",
       rating: 5,
-      comment: "Trabalho com o Marcelo há 5 anos para eventos corporativos. Ele é extremamente organizado e nunca nos deixou na mão. A frota é excelente e os motoristas muito educados.",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+      comment: "Trabalho com o Marcelo há cinco anos em eventos corporativos. O atendimento é extremamente organizado, a frota é excelente e a equipe sempre muito educada.",
+      avatar: avatarAna
     },
     {
       name: "Michael Chen",
       role: "Turista Internacional",
       location: "EUA",
       rating: 5,
-      comment: "Primeira vez no Brasil e estava preocupado com a segurança. Marcelo me deixou completamente à vontade. Ele me encontrou em GRU com uma placa e me levou direto para o meu hotel. Altamente recomendado!",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+      comment: "Era minha primeira vez no Brasil e eu estava preocupado com a segurança. Marcelo me deixou totalmente à vontade, me recebeu em GRU com placa e me levou direto ao hotel. Recomendo sem hesitar.",
+      avatar: avatarMichael
     },
     {
       name: "Sophia Müller",
       role: "Enviada Diplomática",
       location: "Alemanha",
       rating: 5,
-      comment: "Discrição e pontualidade são primordiais para o meu trabalho. A MarceloTaxi supera as expectativas todas as vezes. O Wi-Fi de bordo me permitiu trabalhar perfeitamente durante o trajeto.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+      comment: "Discrição e pontualidade são essenciais no meu trabalho, e a MarceloTaxi sempre supera as expectativas. O Wi-Fi de bordo me permite trabalhar normalmente durante o trajeto.",
+      avatar: avatarSophia
     },
     {
       name: "Roberto Silva",
       role: "Diretor Executivo",
       location: "Curitiba, Brasil",
       rating: 5,
-      comment: "O melhor serviço de transfer em SP. Carros novos, higienizados e o atendimento pelo WhatsApp é muito rápido. Facilita muito a vida de quem viaja a trabalho.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+      comment: "Um dos melhores serviços de transfer em São Paulo. Carros novos, higienizados e atendimento rápido pelo WhatsApp. Facilita muito a rotina de quem viaja a trabalho.",
+      avatar: avatarRoberto
     },
     {
       name: "Elena Rossi",
       role: "Consultora de Moda",
       location: "Itália",
       rating: 5,
-      comment: "Serviço muito elegante. O motorista foi prestativo com minhas muitas malas e conhecia a cidade perfeitamente, evitando o tráfego durante as horas de pico. Experiência fantástica.",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop"
+      comment: "Um serviço elegante e muito eficiente. O motorista foi prestativo com minhas malas e conduziu o trajeto com ótimo conhecimento da cidade, evitando o trânsito nos horários de pico.",
+      avatar: avatarElena
     }
   ];
 
@@ -75,7 +81,7 @@ export function Reviews() {
             <span className="text-xl font-bold">Avaliação Média 4.9/5</span>
           </div>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Veja o que nossos clientes corporativos e de lazer dizem sobre sua experiência com a MarceloTaxi.
+            Veja como clientes corporativos e particulares avaliam a experiência de viajar com a MarceloTaxi.
           </p>
         </div>
       </section>
@@ -123,7 +129,7 @@ export function Reviews() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">Viaje com Confiança</h2>
           <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
-            Junte-se a milhares de viajantes satisfeitos que confiam na MarceloTaxi para suas necessidades de mobilidade em São Paulo.
+            Junte-se aos clientes que escolhem a MarceloTaxi para se deslocar com segurança, conforto e previsibilidade em São Paulo.
           </p>
           <div className="flex flex-wrap justify-center gap-12 grayscale opacity-50">
             <div className="text-2xl font-bold tracking-widest uppercase">TripAdvisor</div>

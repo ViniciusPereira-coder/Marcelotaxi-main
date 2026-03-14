@@ -32,7 +32,7 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     window.open(buildWhatsappUrl(), "_blank", "noopener,noreferrer");
-    toast.success("Perfeito! Abrimos o WhatsApp para concluir seu atendimento.");
+    toast.success("Abrimos o WhatsApp para você concluir o atendimento.");
     setFormData({ name: "", email: "", phone: "", service: "Traslado Aeroporto", message: "" });
   };
 
@@ -48,7 +48,7 @@ export function Contact() {
             Fale <span className="text-[#D4AF37]">Conosco</span>
           </motion.h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Disponível 24/7 para reservas, orçamentos e solicitações de transporte especializado.
+            Estamos disponíveis 24/7 para reservas, orçamentos e atendimentos personalizados.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-1">WhatsApp</h4>
-                    <p className="text-gray-400 mb-1">Reservas e orçamentos instantâneos</p>
+                    <p className="text-gray-400 mb-1">Reservas e cotações com resposta rápida</p>
                     <p className="text-[#D4AF37] font-bold">{COMPANY_INFO.phoneDisplay}</p>
                   </div>
                 </a>
@@ -84,7 +84,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-1">Ligação Telefônica</h4>
-                    <p className="text-gray-400 mb-1">Central de atendimento 24/7</p>
+                    <p className="text-gray-400 mb-1">Atendimento direto 24 horas por dia</p>
                     <p className="text-white font-bold">{COMPANY_INFO.phoneDisplay}</p>
                   </div>
                 </a>
@@ -98,7 +98,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-1">E-mail</h4>
-                    <p className="text-gray-400 mb-1">Solicitações corporativas e eventos</p>
+                    <p className="text-gray-400 mb-1">Atendimento corporativo, eventos e demandas especiais</p>
                     <p className="text-white font-bold">{COMPANY_INFO.email}</p>
                   </div>
                 </a>
@@ -190,7 +190,7 @@ export function Contact() {
                       <option className="bg-black">Transporte Corporativo</option>
                       <option className="bg-black">Viagem Litoral/Interior</option>
                       <option className="bg-black">Logística de Eventos</option>
-                      <option className="bg-black">Outros</option>
+                      <option className="bg-black">Outro atendimento</option>
                     </select>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     className="bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-[#D4AF37] outline-none transition-colors resize-none"
-                    placeholder="Conte-nos sobre seu voo, tamanho do grupo ou requisitos especiais..."
+                    placeholder="Informe voo, endereço, número de passageiros ou qualquer necessidade especial..."
                   ></textarea>
                 </div>
 

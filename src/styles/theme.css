@@ -32,6 +32,13 @@ a {
   padding-inline: 1rem;
 }
 
+@supports (content-visibility: auto) {
+  section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     padding-inline: 1.5rem;
@@ -53,4 +60,21 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gold);
+}
+
+/* Stable hover styles for navigation and WhatsApp CTAs across desktop/mobile browsers. */
+.menu-link:hover {
+  color: var(--color-gold) !important;
+}
+
+.menu-link-active {
+  color: var(--color-gold) !important;
+}
+
+.whatsapp-cta:hover,
+.whatsapp-cta:focus-visible,
+.whatsapp-cta:active {
+  background: #000000 !important;
+  border-color: var(--color-gold) !important;
+  color: var(--color-gold) !important;
 }

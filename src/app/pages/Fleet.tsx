@@ -2,27 +2,28 @@ import React from "react";
 import { motion } from "motion/react";
 import { Users, Briefcase, ShieldCheck, Snowflake, Wifi, Info, ArrowRight } from "lucide-react";
 import { COMPANY_LINKS } from "@/app/config/company";
+import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 export function Fleet() {
   const categories = [
     {
-      name: "Sedan Executivo",
-      model: "Mercedes Classe C, BMW Série 3 ou similar",
+      name: "Sedan Executivo Nacional",
+      model: "Toyota Corolla, Chevrolet Onix Plus ou similar (frota brasileira)",
       capacity: "3 Passageiros",
       luggage: "2 Malas Grandes",
-      image: "https://images.unsplash.com/photo-1764089859665-7d417664c5de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
-      features: ["Interior em couro", "Controle de temperatura", "Luzes de leitura", "Cabine silenciosa"],
-      bestFor: "Viajantes de negócios individuais, casais, traslados de aeroporto."
+      image: SITE_IMAGES.corporate,
+      features: ["Cabine silenciosa", "Ar-condicionado digital", "Carregador USB", "Motorista profissional"],
+      bestFor: "Executivos, casais e passageiros que buscam deslocamentos urbanos e aeroportuários com conforto."
     },
     {
-      name: "Minivan Premium",
-      model: "Mercedes Classe V, Kia Carnival ou similar",
+      name: "Spin Táxi Executivo (Principal)",
+      model: "Chevrolet Spin 1.8 - versão brasileira para transporte executivo",
       capacity: "6-7 Passageiros",
       luggage: "5 Malas Grandes",
-      image: "https://images.unsplash.com/photo-1722816385770-8640d490117b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
-      features: ["Interior espaçoso", "Portas deslizantes", "Assentos configuráveis", "Espaço extra para as pernas"],
-      bestFor: "Famílias, pequenos grupos, equipes corporativas com bagagem."
+      image: SITE_IMAGES.fleet,
+      features: ["Interior espaçoso", "Grande capacidade de bagagem", "Assentos confortáveis", "Ideal para grupos"],
+      bestFor: "Famílias, pequenos grupos e equipes corporativas com maior volume de bagagem."
     }
   ];
 
@@ -38,7 +39,7 @@ export function Fleet() {
             Nossa <span className="text-[#D4AF37]">Frota</span>
           </motion.h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Veículos modernos, premium e meticulosamente mantidos para uma jornada segura e confortável.
+            Veículos executivos selecionados para oferecer conforto, apresentação impecável e segurança em qualquer trajeto.
           </p>
         </div>
       </section>
@@ -133,7 +134,7 @@ export function Fleet() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Nossos Padrões de Qualidade</h2>
-            <p className="text-gray-400">Independentemente da categoria do veículo, mantemos critérios rigorosos de excelência.</p>
+            <p className="text-gray-400">Em todas as categorias, seguimos o mesmo padrão de qualidade, conservação e atendimento.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

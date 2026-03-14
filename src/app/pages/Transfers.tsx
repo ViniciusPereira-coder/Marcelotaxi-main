@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Plane, Building2, Palmtree, Calendar, ArrowRight, CheckCircle2 } from "lucide-react";
 import { COMPANY_LINKS } from "@/app/config/company";
+import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 export function Transfers() {
@@ -10,8 +11,8 @@ export function Transfers() {
       title: "Traslados de Aeroporto",
       subtitle: "Chegadas e Partidas",
       icon: <Plane size={32} />,
-      image: "https://images.unsplash.com/photo-1620996149152-277fddb58133?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
-      description: "Transporte sem preocupações de e para os principais aeroportos de São Paulo. Monitoramos seu voo para garantir que estaremos lá exatamente quando você pousar.",
+      image: SITE_IMAGES.airport,
+      description: "Atendimento ágil e confiável para chegadas e partidas nos principais aeroportos de São Paulo. Monitoramos o voo para alinhar o embarque ao horário real da sua operação.",
       locations: ["Guarulhos (GRU)", "Congonhas (CGH)", "Viracopos (VCP)"],
       benefits: ["Recepção com placa de nome", "60 min de espera inclusos", "Monitoramento de atrasos", "Motorista bilíngue"]
     },
@@ -19,8 +20,8 @@ export function Transfers() {
       title: "Transporte Corporativo",
       subtitle: "Mobilidade Executiva",
       icon: <Building2 size={32} />,
-      image: "https://images.unsplash.com/photo-1696992443043-7d63e521b91c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
-      description: "Transporte confiável para reuniões de negócios, conferências e transferências entre escritórios. Motoristas profissionais que entendem o valor do seu tempo e discrição.",
+      image: SITE_IMAGES.corporate,
+      description: "Solução executiva para reuniões, conferências e deslocamentos entre escritórios, com motoristas que entendem a importância de discrição, eficiência e pontualidade.",
       locations: ["Faria Lima", "Berrini", "Paulista", "Alphaville"],
       benefits: ["Serviço confidencial", "Faturamento mensal disponível", "Veículos discretos", "Pontualidade garantida"]
     },
@@ -28,8 +29,8 @@ export function Transfers() {
       title: "Traslados Litoral e Interior",
       subtitle: "Viagens de Lazer",
       icon: <Palmtree size={32} />,
-      image: "https://images.unsplash.com/photo-1764089859665-7d417664c5de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
-      description: "Viagens de longa distância confortáveis para a costa ou interior. Comece suas férias da maneira certa, sem o estresse de dirigir ou estacionar.",
+      image: SITE_IMAGES.fleet,
+      description: "Viagens confortáveis para o litoral e o interior, com atendimento porta a porta para quem busca praticidade desde a saída.",
       locations: ["Santos e Guarujá", "Ilhabela e São Sebastião", "Campos do Jordão", "Sorocaba"],
       benefits: ["Ampla capacidade de bagagem", "Paradas conforme solicitado", "Pedágios inclusos", "Serviço porta a porta"]
     },
@@ -37,10 +38,10 @@ export function Transfers() {
       title: "Eventos e Casamentos",
       subtitle: "Ocasiões Especiais",
       icon: <Calendar size={32} />,
-      image: "https://images.unsplash.com/photo-1632931189735-8d63eed6f4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg",
-      description: "Coordenação completa para eventos especiais. Oferecemos transporte de luxo para noivos, famílias e convidados de alto perfil.",
+      image: SITE_IMAGES.service,
+      description: "Coordenação dedicada para eventos especiais, com atendimento elegante para noivos, famílias e convidados.",
       locations: ["Região Metropolitana de São Paulo"],
-      benefits: ["Serviço de prontidão", "Coordenação de múltiplos veículos", "Modelos sedan premium", "Traje profissional"]
+      benefits: ["Serviço de prontidão", "Coordenação de múltiplos veículos", "Spin e sedans da frota brasileira", "Traje profissional"]
     }
   ];
 
@@ -56,7 +57,7 @@ export function Transfers() {
             Nossos <span className="text-[#D4AF37]">Serviços</span>
           </motion.h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Soluções abrangentes de transporte executivo personalizadas para suas necessidades específicas em São Paulo e região.
+            Serviços de transporte executivo pensados para diferentes perfis de atendimento em São Paulo e região.
           </p>
         </div>
       </section>
@@ -142,7 +143,7 @@ export function Transfers() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">Não encontrou o que precisa?</h2>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto mb-12">
-            Oferecemos logística personalizada para grupos, aluguéis de longo prazo e itinerários complexos.
+            Também desenvolvemos soluções sob medida para grupos, contratos recorrentes e roteiros personalizados.
           </p>
           <a
             href={COMPANY_LINKS.whatsapp}

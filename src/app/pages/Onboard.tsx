@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Wifi, Battery, Snowflake, Coffee, Music, Shield, CheckCircle2 } from "lucide-react";
 import { COMPANY_LINKS } from "@/app/config/company";
+import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 export function Onboard() {
@@ -9,32 +10,32 @@ export function Onboard() {
     {
       icon: <Wifi size={40} className="text-[#D4AF37]" />,
       title: "Wi-Fi de Alta Velocidade",
-      description: "Mantenha-se conectado durante toda a jornada. Perfeito para checar e-mails entre reuniões ou ouvir sua música favorita."
+      description: "Conexão estável durante todo o trajeto, ideal para trabalho, comunicação e entretenimento."
     },
     {
       icon: <Snowflake size={40} className="text-[#D4AF37]" />,
       title: "Climatização Digital",
-      description: "Nossos veículos possuem ar-condicionado multi-zona, garantindo que você viaje na sua temperatura preferida."
+      description: "Climatização eficiente para manter o ambiente confortável em qualquer horário do dia."
     },
     {
       icon: <Battery size={40} className="text-[#D4AF37]" />,
       title: "Pontos de Carga",
-      description: "Cabos de carregamento universais para dispositivos Android e iPhone estão disponíveis em todos os veículos."
+      description: "Cabos e pontos de recarga disponíveis para que seus dispositivos acompanhem o ritmo da sua agenda."
     },
     {
       icon: <Coffee size={40} className="text-[#D4AF37]" />,
       title: "Água Cortesia",
-      description: "Água mineral gelada é fornecida para todos os passageiros em cada viagem para mantê-lo hidratado."
+      description: "Água mineral cortesia para tornar a experiência de bordo mais agradável."
     },
     {
       icon: <Music size={40} className="text-[#D4AF37]" />,
       title: "Som Premium",
-      description: "Desfrute de uma cabine silenciosa ou ouça seu áudio preferido através de nossos sistemas de som de alta qualidade."
+      description: "Cabine silenciosa e sistema de som de qualidade para uma viagem mais confortável."
     },
     {
       icon: <Shield size={40} className="text-[#D4AF37]" />,
       title: "Veículo Higienizado",
-      description: "Seguimos protocolos rigorosos de higiene, sanitizando todos os pontos de contato entre cada atendimento."
+      description: "Limpeza cuidadosa e protocolos de higiene aplicados entre os atendimentos."
     }
   ];
 
@@ -43,9 +44,9 @@ export function Onboard() {
       <section className="relative h-[60vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback 
-            src="https://images.unsplash.com/photo-1632931189735-8d63eed6f4cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg" 
+            src={SITE_IMAGES.service} 
             className="w-full h-full object-cover" 
-            alt="Interior de Luxo" 
+            alt="Taxi preto e branco em atendimento" 
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -58,7 +59,7 @@ export function Onboard() {
             Experiência <span className="text-[#D4AF37]">de Bordo</span>
           </motion.h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Cuidamos de cada detalhe para garantir que sua jornada conosco seja o mais confortável e produtiva possível.
+            Cada detalhe a bordo é pensado para oferecer conforto, praticidade e uma experiência de alto padrão.
           </p>
         </div>
       </section>
@@ -94,7 +95,7 @@ export function Onboard() {
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl font-bold mb-8">Viajando com Tranquilidade</h2>
               <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                Além das amenidades físicas, nosso serviço de bordo inclui o profissionalismo de nossos motoristas. Eles são treinados para proporcionar um ambiente discreto, prestativo e seguro.
+                Além dos itens de conforto, você conta com um atendimento profissional, discreto e preparado para tornar o trajeto mais leve e eficiente.
               </p>
               <div className="space-y-6">
                 {[
@@ -118,9 +119,9 @@ export function Onboard() {
             <div className="order-1 lg:order-2">
               <div className="rounded-[40px] overflow-hidden border border-[#D4AF37]/20 shadow-2xl">
                 <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1696992443043-7d63e521b91c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg" 
+                  src={SITE_IMAGES.hero} 
                   className="w-full h-full object-cover" 
-                  alt="Serviço Profissional" 
+                  alt="Taxi executivo preto e branco" 
                 />
               </div>
             </div>
@@ -133,7 +134,7 @@ export function Onboard() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold mb-8">Experimente o Verdadeiro Transporte Executivo</h2>
             <p className="text-gray-400 text-xl mb-12">
-              Reserve sua próxima viagem com a MarceloTaxi e descubra por que somos a escolha preferida de executivos em São Paulo.
+              Reserve sua próxima viagem com a MarceloTaxi e descubra por que tantos clientes confiam em nosso atendimento executivo em São Paulo.
             </p>
             <a
               href={COMPANY_LINKS.whatsapp}

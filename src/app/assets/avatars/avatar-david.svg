@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar David</title>
+  <desc id="desc">Avatar com iniciais DR.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="80" fill="url(#bg)"/>
+  <circle cx="80" cy="72" r="28" fill="#d4af37"/>
+  <path d="M30 142c8-24 28-38 50-38s42 14 50 38" fill="#d4af37"/>
+  <text x="80" y="90" text-anchor="middle" font-family="Manrope, sans-serif" font-size="28" font-weight="700" fill="#000">DR</text>
+</svg>
