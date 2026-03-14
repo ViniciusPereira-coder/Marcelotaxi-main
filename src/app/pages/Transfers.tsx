@@ -21,9 +21,9 @@ export function Transfers() {
       subtitle: "Mobilidade Executiva",
       icon: <Building2 size={32} />,
       image: SITE_IMAGES.corporate,
-      description: "Solução executiva para reuniões, conferências e deslocamentos entre escritórios, com motoristas que entendem a importância de discrição, eficiência e pontualidade.",
+      description: "Solução executiva para reuniões, conferências e deslocamentos entre escritórios, com motoristas que entendem a importância de planejamento, eficiência e pontualidade.",
       locations: ["Faria Lima", "Berrini", "Paulista", "Alphaville"],
-      benefits: ["Serviço confidencial", "Faturamento mensal disponível", "Veículos discretos", "Pontualidade garantida"]
+      benefits: ["Atendimento profissional", "Faturamento mensal disponível", "Veículos executivos", "Pontualidade garantida"]
     },
     {
       title: "Traslados Litoral e Interior",

@@ -7,7 +7,6 @@ const loadTransfers = () => import("./pages/Transfers");
 const loadFleet = () => import("./pages/Fleet");
 const loadOnboard = () => import("./pages/Onboard");
 const loadAbout = () => import("./pages/About");
-const loadReviews = () => import("./pages/Reviews");
 const loadContact = () => import("./pages/Contact");
 const loadEvents = () => import("./pages/Events");
 
@@ -16,7 +15,6 @@ const Transfers = React.lazy(() => loadTransfers().then((m) => ({ default: m.Tra
 const Fleet = React.lazy(() => loadFleet().then((m) => ({ default: m.Fleet })));
 const Onboard = React.lazy(() => loadOnboard().then((m) => ({ default: m.Onboard })));
 const About = React.lazy(() => loadAbout().then((m) => ({ default: m.About })));
-const Reviews = React.lazy(() => loadReviews().then((m) => ({ default: m.Reviews })));
 const Contact = React.lazy(() => loadContact().then((m) => ({ default: m.Contact })));
 const Events = React.lazy(() => loadEvents().then((m) => ({ default: m.Events })));
 
@@ -30,7 +28,6 @@ export const router = createBrowserRouter([
       { path: "fleet", Component: Fleet },
       { path: "onboard", Component: Onboard },
       { path: "about", Component: About },
-      { path: "reviews", Component: Reviews },
       { path: "contact", Component: Contact },
       { path: "eventos", Component: Events },
       { path: "events", Component: Events },
@@ -43,7 +40,6 @@ const routePreloaders = [
   loadFleet,
   loadOnboard,
   loadAbout,
-  loadReviews,
   loadContact,
   loadEvents,
 ];

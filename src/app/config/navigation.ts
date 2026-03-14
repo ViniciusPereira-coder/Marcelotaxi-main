@@ -9,7 +9,6 @@ export const NAV_LINKS: NavItem[] = [
   { name: "Eventos", path: "/eventos" },
   { name: "Frota", path: "/fleet" },
   { name: "Serviços de Bordo", path: "/onboard" },
-  { name: "Sobre Nós", path: "/about" },
-  { name: "Depoimentos", path: "/reviews" },
+  { name: "Sobre", path: "/about" },
   { name: "Contato", path: "/contact" },
 ];

@@ -17,7 +17,7 @@ export function About() {
             Sobre a <span className="text-[#D4AF37]">MarceloTaxi</span>
           </motion.h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Uma trajetória construída com excelência, discrição e confiança no transporte executivo em São Paulo.
+            Uma trajetória construída com excelência, profissionalismo e confiança no transporte executivo em São Paulo.
           </p>
         </div>
       </section>
@@ -87,7 +87,7 @@ export function About() {
               {
                 icon: <Users2 className="text-[#D4AF37]" size={40} />,
                 title: "Serviço Personalizado",
-                desc: "Cada atendimento é ajustado à necessidade do cliente, com flexibilidade, discrição e atenção aos detalhes."
+                desc: "Cada atendimento é ajustado à necessidade do cliente, com flexibilidade, atenção e foco nos detalhes."
               }
             ].map((value, i) => (
               <div key={i} className="flex flex-col items-center text-center">

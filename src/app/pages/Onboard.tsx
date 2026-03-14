@@ -95,7 +95,7 @@ export function Onboard() {
             <div className="order-2 lg:order-1">
               <h2 className="text-4xl font-bold mb-8">Viajando com Tranquilidade</h2>
               <p className="text-gray-400 text-lg mb-10 leading-relaxed">
-                Além dos itens de conforto, você conta com um atendimento profissional, discreto e preparado para tornar o trajeto mais leve e eficiente.
+                Além dos itens de conforto, você conta com um atendimento profissional, atencioso e preparado para tornar o trajeto mais leve e eficiente.
               </p>
               <div className="space-y-6">
                 {[

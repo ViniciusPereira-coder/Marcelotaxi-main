@@ -40,7 +40,7 @@ export function Reviews() {
       role: "Enviada Diplomática",
       location: "Alemanha",
       rating: 5,
-      comment: "Discrição e pontualidade são essenciais no meu trabalho, e a MarceloTaxi sempre supera as expectativas. O Wi-Fi de bordo me permite trabalhar normalmente durante o trajeto.",
+      comment: "Pontualidade e profissionalismo são essenciais no meu trabalho, e a MarceloTaxi sempre supera as expectativas. O Wi-Fi de bordo me permite trabalhar normalmente durante o trajeto.",
       avatar: avatarSophia
     },
     {

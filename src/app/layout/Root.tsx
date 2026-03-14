@@ -32,12 +32,12 @@ export function Root() {
       <Toaster position="top-center" />
 
       <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#05080f]/80 backdrop-blur-xl">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#103060]/20 via-transparent to-[#442f00]/20" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-[#442f00]/25" />
         <div className="container relative mx-auto flex h-[84px] items-center justify-between px-4">
           <Link to="/" className="group flex items-center gap-3">
             <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-[#D9B44A]/60 bg-black">
               <span className="text-lg font-black text-[#D9B44A]">{COMPANY_INFO.brandInitials}</span>
-              <div className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-[#5de5ff]" />
+              <div className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-[#D9B44A]" />
             </div>
             <div>
               <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
@@ -52,17 +52,17 @@ export function Root() {
           </Link>
 
           <nav className="hidden items-center gap-4 lg:flex">
-            <div className="relative flex items-center rounded-full border border-white/15 bg-[#0c1428]/75 p-1 shadow-[0_14px_45px_rgba(0,0,0,0.48)] backdrop-blur-xl">
-              <span className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_20%_0%,rgba(93,229,255,0.18),transparent_48%),radial-gradient(circle_at_85%_100%,rgba(217,180,74,0.18),transparent_42%)]" />
+            <div className="relative flex items-center rounded-full border border-white/15 bg-black/70 p-1 shadow-[0_14px_45px_rgba(0,0,0,0.48)] backdrop-blur-xl">
+              <span className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.16),transparent_48%),radial-gradient(circle_at_85%_100%,rgba(217,180,74,0.2),transparent_42%)]" />
               {NAV_LINKS.map((link) => (
                 <NavLink key={link.path} to={link.path} className="relative z-10 rounded-full outline-none">
                   {({ isActive }) => (
-                    <span className="relative block rounded-full px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] xl:px-4 xl:text-[11px]">
+                    <span className="relative block rounded-full px-3 py-2 text-[10px] font-black uppercase tracking-[0.1em] whitespace-nowrap xl:px-4 xl:text-[11px]">
                       {isActive ? (
                         <motion.span
                           layoutId="desktop-nav-active-pill"
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                          className="absolute inset-0 rounded-full bg-gradient-to-r from-[#5de5ff] via-[#f8fdff] to-[#D9B44A]"
+                          className="absolute inset-0 rounded-full bg-gradient-to-r from-[#f6f6f6] via-[#ffffff] to-[#D9B44A]"
                         />
                       ) : null}
                       <span className={`relative z-10 transition-colors ${isActive ? "text-black" : "text-slate-200 hover:text-white"}`}>
@@ -114,9 +114,9 @@ export function Root() {
             aria-label="Menu principal"
           >
             <div className="glass-panel rounded-3xl p-6">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#5de5ff]/30 bg-[#5de5ff]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#5de5ff]">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/35 bg-[#D9B44A]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#D9B44A]">
                 <Sparkles size={14} />
-                Navegacao
+                Navegação
               </div>
               <div className="flex flex-col gap-3">
                 {NAV_LINKS.map((link) => (
@@ -157,7 +157,7 @@ export function Root() {
       </AnimatePresence>
 
       <main className="relative pt-[84px]">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_0%,rgba(20,50,100,0.18),transparent_38%),radial-gradient(circle_at_90%_10%,rgba(110,80,0,0.18),transparent_35%)]" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_0%,rgba(255,255,255,0.08),transparent_38%),radial-gradient(circle_at_90%_10%,rgba(217,180,74,0.2),transparent_35%)]" />
         <Outlet />
       </main>
 
@@ -213,19 +213,19 @@ export function Root() {
             </div>
 
             <div className="glass-panel rounded-3xl p-6">
-              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Servicos</h4>
+              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Serviços</h4>
               <ul className="space-y-3 text-sm text-slate-300">
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados aeroportuarios</Link></li>
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados aeroportuários</Link></li>
                 <li><Link to="/transfers" className="transition-colors hover:text-white">Transporte corporativo</Link></li>
-                <li><Link to="/eventos" className="transition-colors hover:text-white">Logistica de eventos</Link></li>
+                <li><Link to="/eventos" className="transition-colors hover:text-white">Logística de eventos</Link></li>
                 <li><Link to="/fleet" className="transition-colors hover:text-white">Frota executiva</Link></li>
               </ul>
             </div>
 
             <div className="glass-panel rounded-3xl p-6">
-              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Areas atendidas</h4>
+              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Áreas atendidas</h4>
               <ul className="space-y-3 text-sm text-slate-300">
-                <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Sao Paulo (Capital)</li>
+                <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> São Paulo (Capital)</li>
                 <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Aeroporto GRU</li>
                 <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Aeroporto CGH</li>
                 <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Aeroporto VCP</li>
@@ -233,7 +233,7 @@ export function Root() {
             </div>
 
             <div className="glass-panel rounded-3xl p-6">
-              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Contato rapido</h4>
+              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Contato rápido</h4>
               <div className="space-y-3 text-sm">
                 <a href={COMPANY_LINKS.phone} className="flex items-center gap-3 text-white transition-colors hover:text-[#D9B44A]">
                   <Phone size={16} className="text-[#D9B44A]" />
@@ -250,7 +250,7 @@ export function Root() {
                 </a>
                 <div className="flex items-center gap-3 text-slate-300">
                   <CheckCircle2 size={16} className="text-[#D9B44A]" />
-                  Disponivel 24/7
+                  Disponível 24/7
                 </div>
               </div>
             </div>
@@ -261,7 +261,7 @@ export function Root() {
               © {currentYear} {COMPANY_INFO.legalName}. Todos os direitos reservados. CNPJ: {COMPANY_INFO.cnpj}
             </p>
             <div className="flex gap-5 text-xs text-slate-400">
-              <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Politica de Privacidade</a>
+              <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Política de Privacidade</a>
               <a href={COMPANY_LINKS.termsOfUse} className="transition-colors hover:text-white">Termos de Uso</a>
             </div>
           </div>
