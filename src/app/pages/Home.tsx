@@ -76,8 +76,8 @@ export function Home() {
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
             src={SITE_IMAGES.hero}
-            className="h-full w-full object-cover"
-            alt="Chevrolet Spin táxi executivo"
+            className="h-full w-full object-cover object-[center_52%] md:object-[center_48%] lg:object-[center_45%]"
+            alt="Chevrolet Spin Marcelo com avião ao fundo"
             loading="eager"
             fetchPriority="high"
           />
