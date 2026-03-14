@@ -1,7 +1,13 @@
 :root {
-  --color-black: #000000;
-  --color-black-soft: #0a0a0a;
-  --color-gold: #d4af37;
+  --color-bg: #05080f;
+  --color-bg-soft: #0a1020;
+  --color-surface: #0f172a;
+  --color-surface-soft: #131d33;
+  --color-gold: #d9b44a;
+  --color-gold-strong: #f5d27b;
+  --color-cyan: #5de5ff;
+  --color-text: #f8fafc;
+  --color-muted: #9aa4ba;
 }
 
 * {
@@ -14,11 +20,21 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", system-ui, -apple-system, sans-serif;
-  background: var(--color-black);
-  color: #ffffff;
+  font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 8% -20%, #163668 0%, transparent 35%),
+    radial-gradient(circle at 92% 0%, #2e2200 0%, transparent 30%), var(--color-bg);
+  color: var(--color-text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora", "Space Grotesk", system-ui, sans-serif;
 }
 
 a {
@@ -27,7 +43,7 @@ a {
 }
 
 .container {
-  width: min(100%, 80rem);
+  width: min(100%, 84rem);
   margin-inline: auto;
   padding-inline: 1rem;
 }
@@ -50,11 +66,11 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-black);
+  background: #05060c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: #293147;
   border-radius: 9999px;
 }
 
@@ -62,13 +78,39 @@ a {
   background: var(--color-gold);
 }
 
-/* Stable hover styles for navigation and WhatsApp CTAs across desktop/mobile browsers. */
+.menu-link {
+  position: relative;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.4rem;
+  left: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, transparent, var(--color-cyan), var(--color-gold), transparent);
+}
+
 .menu-link:hover {
   color: var(--color-gold) !important;
 }
 
+.menu-link:hover::after,
+.menu-link-active::after {
+  transform: scaleX(1);
+}
+
 .menu-link-active {
-  color: var(--color-gold) !important;
+  color: var(--color-gold-strong) !important;
+}
+
+.whatsapp-cta {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
 }
 
 .whatsapp-cta:hover,
@@ -77,4 +119,23 @@ a {
   background: #000000 !important;
   border-color: var(--color-gold) !important;
   color: var(--color-gold) !important;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(18, 26, 45, 0.88), rgba(8, 12, 22, 0.8));
+  backdrop-filter: blur(10px);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
 }

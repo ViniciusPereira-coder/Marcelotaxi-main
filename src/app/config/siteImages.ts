@@ -1,10 +1,10 @@
 import airportSp from "@/app/assets/photos/airport-sp.jpg";
 import heroSpinRoad from "@/app/assets/photos/Foto spin na estrada.png";
-import heroSpinPlane from "@/app/assets/photos/spin-marcelo-e-aviao.png";
+import heroTaxiPlane from "@/app/assets/photos/taxi-e-aviao.png";
 
 export const SITE_IMAGES = {
-  // Brazilian taxi context + Spin as lead vehicle.
-  hero: heroSpinPlane,
+  // Hero principal.
+  hero: heroTaxiPlane,
   airport: airportSp,
   // Temporary fallbacks until dedicated files are added.
   corporate: airportSp,

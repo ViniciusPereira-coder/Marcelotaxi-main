@@ -10,6 +10,7 @@ import {
   Mail,
   MapPin,
   CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Toaster } from "sonner";
@@ -27,61 +28,74 @@ export function Root() {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen bg-black font-sans text-white selection:bg-[#D4AF37] selection:text-black">
+    <div className="min-h-screen bg-[#05080f] text-slate-100 selection:bg-[#D9B44A] selection:text-black">
       <Toaster position="top-center" />
 
-      <header className="fixed top-0 left-0 z-50 w-full border-b border-[#D4AF37]/20 bg-black/90 backdrop-blur-md">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4">
-          <Link to="/" className="group flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#D4AF37] transition-colors group-hover:bg-[#D4AF37]">
-              <span className="font-bold text-[#D4AF37] transition-colors group-hover:text-black">
-                {COMPANY_INFO.brandInitials}
-              </span>
+      <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#05080f]/80 backdrop-blur-xl">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#103060]/20 via-transparent to-[#442f00]/20" />
+        <div className="container relative mx-auto flex h-[84px] items-center justify-between px-4">
+          <Link to="/" className="group flex items-center gap-3">
+            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-[#D9B44A]/60 bg-black">
+              <span className="text-lg font-black text-[#D9B44A]">{COMPANY_INFO.brandInitials}</span>
+              <div className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-[#5de5ff]" />
             </div>
             <div>
-              <span className="block text-xl font-bold leading-none tracking-widest text-white">
+              <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
                 {COMPANY_INFO.brandName}
               </span>
-              <span className="block text-xs font-medium tracking-[0.3em] text-[#D4AF37]">
-                {COMPANY_INFO.brandTagline}
-              </span>
+              {COMPANY_INFO.brandTagline ? (
+                <span className="block text-[11px] font-semibold tracking-[0.24em] text-[#D9B44A]">
+                  {COMPANY_INFO.brandTagline}
+                </span>
+              ) : null}
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex">
-            {NAV_LINKS.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `menu-link text-sm font-medium uppercase tracking-wide transition-colors ${
-                    isActive ? "menu-link-active" : "text-gray-300"
-                  }`
-                }
-              >
-                {link.name}
-              </NavLink>
-            ))}
-              <a
-                href={COMPANY_LINKS.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-              className="whatsapp-cta flex items-center gap-2 rounded-full border border-transparent bg-[#D4AF37] px-6 py-2 text-sm font-bold text-black transition-colors"
+          <nav className="hidden items-center gap-4 lg:flex">
+            <div className="relative flex items-center rounded-full border border-white/15 bg-[#0c1428]/75 p-1 shadow-[0_14px_45px_rgba(0,0,0,0.48)] backdrop-blur-xl">
+              <span className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_20%_0%,rgba(93,229,255,0.18),transparent_48%),radial-gradient(circle_at_85%_100%,rgba(217,180,74,0.18),transparent_42%)]" />
+              {NAV_LINKS.map((link) => (
+                <NavLink key={link.path} to={link.path} className="relative z-10 rounded-full outline-none">
+                  {({ isActive }) => (
+                    <span className="relative block rounded-full px-3 py-2 text-[10px] font-black uppercase tracking-[0.12em] xl:px-4 xl:text-[11px]">
+                      {isActive ? (
+                        <motion.span
+                          layoutId="desktop-nav-active-pill"
+                          transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                          className="absolute inset-0 rounded-full bg-gradient-to-r from-[#5de5ff] via-[#f8fdff] to-[#D9B44A]"
+                        />
+                      ) : null}
+                      <span className={`relative z-10 transition-colors ${isActive ? "text-black" : "text-slate-200 hover:text-white"}`}>
+                        {link.name}
+                      </span>
+                    </span>
+                  )}
+                </NavLink>
+              ))}
+            </div>
+
+            <a
+              href={COMPANY_LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-cta group relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-[#D9B44A]/40 px-6 py-2.5 text-sm font-black text-black transition-transform hover:-translate-y-0.5"
             >
-              <MessageCircle size={18} />
-              WHATSAPP
+              <span className="absolute inset-0 bg-gradient-to-r from-[#D9B44A] to-[#f0cd79]" />
+              <span className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_15%_50%,rgba(255,255,255,0.45),transparent_40%)]" />
+              <MessageCircle size={17} className="relative z-10" />
+              <span className="relative z-10">WHATSAPP</span>
             </a>
           </nav>
 
           <button
-            className="text-white lg:hidden"
+            className="rounded-xl border border-white/15 bg-white/[0.03] p-2 text-white lg:hidden"
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             aria-label={isMenuOpen ? "Fechar menu principal" : "Abrir menu principal"}
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </header>
@@ -93,39 +107,47 @@ export function Root() {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-black px-6 pt-24 lg:hidden"
+            transition={{ type: "spring", damping: 26, stiffness: 220 }}
+            className="fixed inset-0 z-40 border-l border-white/10 bg-[#070b16] px-6 pt-24 lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Menu principal"
           >
-            <div className="flex flex-col gap-6">
-              {NAV_LINKS.map((link) => (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `menu-link text-2xl font-bold uppercase transition-colors ${
-                      isActive ? "menu-link-active" : "text-white"
-                    }`
-                  }
-                >
-                  {link.name}
-                </NavLink>
-              ))}
-              <hr className="border-white/10" />
-              <div className="flex flex-col gap-4">
-                <a href={COMPANY_LINKS.phone} className="flex items-center gap-3 text-lg">
-                  <Phone size={20} className="text-[#D4AF37]" />
+            <div className="glass-panel rounded-3xl p-6">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#5de5ff]/30 bg-[#5de5ff]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#5de5ff]">
+                <Sparkles size={14} />
+                Navegacao
+              </div>
+              <div className="flex flex-col gap-3">
+                {NAV_LINKS.map((link) => (
+                  <NavLink
+                    key={link.path}
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `rounded-xl border px-4 py-3 text-lg font-black uppercase tracking-[0.08em] transition-colors ${
+                        isActive
+                          ? "border-[#D9B44A]/50 bg-[#D9B44A]/15 text-[#D9B44A]"
+                          : "border-white/10 bg-white/[0.02] text-white hover:bg-white/[0.06]"
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                ))}
+              </div>
+              <hr className="my-6 border-white/10" />
+              <div className="flex flex-col gap-3">
+                <a href={COMPANY_LINKS.phone} className="flex items-center gap-3 text-base font-semibold">
+                  <Phone size={18} className="text-[#D9B44A]" />
                   {COMPANY_INFO.phoneDisplay}
                 </a>
                 <a
                   href={COMPANY_LINKS.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="whatsapp-cta flex w-full items-center justify-center gap-2 rounded-xl border border-transparent bg-[#D4AF37] py-4 text-center font-bold text-black transition-colors"
+                  className="whatsapp-cta flex w-full items-center justify-center gap-2 rounded-xl border border-transparent bg-[#D9B44A] py-3 text-center font-black text-black"
                 >
-                  <MessageCircle size={20} />
+                  <MessageCircle size={18} />
                   AGENDAR VIA WHATSAPP
                 </a>
               </div>
@@ -134,132 +156,134 @@ export function Root() {
         )}
       </AnimatePresence>
 
-      <main className="pt-20">
+      <main className="relative pt-[84px]">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_0%,rgba(20,50,100,0.18),transparent_38%),radial-gradient(circle_at_90%_10%,rgba(110,80,0,0.18),transparent_35%)]" />
         <Outlet />
       </main>
 
-      <footer className="border-t border-[#D4AF37]/10 bg-[#0A0A0A] pt-16 pb-8">
+      <footer className="border-t border-white/10 bg-[#050912] pt-16 pb-8">
         <div className="container mx-auto px-4">
-          <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
-            <div className="flex flex-col gap-6">
-              <Link to="/" className="flex items-center gap-2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#D4AF37]">
-                  <span className="font-bold text-[#D4AF37]">{COMPANY_INFO.brandInitials}</span>
+          <div className="mb-14 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+            <div className="glass-panel rounded-3xl p-6">
+              <Link to="/" className="mb-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#D9B44A]/60 bg-black">
+                  <span className="font-black text-[#D9B44A]">{COMPANY_INFO.brandInitials}</span>
                 </div>
                 <div>
-                  <span className="block text-xl font-bold leading-none tracking-widest text-white">
+                  <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
                     {COMPANY_INFO.brandName}
                   </span>
-                  <span className="block text-xs font-medium tracking-[0.3em] text-[#D4AF37]">
-                    {COMPANY_INFO.brandTagline}
-                  </span>
+                  {COMPANY_INFO.brandTagline ? (
+                    <span className="block text-[11px] font-semibold tracking-[0.2em] text-[#D9B44A]">
+                      {COMPANY_INFO.brandTagline}
+                    </span>
+                  ) : null}
                 </div>
               </Link>
-              <p className="text-sm leading-relaxed text-gray-400">
-                Transporte executivo em {COMPANY_INFO.city}, com foco em conforto, pontualidade e atendimento profissional.
+              <p className="text-sm leading-relaxed text-slate-300">
+                Transporte executivo em {COMPANY_INFO.city}, com tecnologia operacional, pontualidade e atendimento humano.
               </p>
-              <div className="flex gap-4">
+              <div className="mt-5 flex gap-3">
                 <a
                   href={COMPANY_LINKS.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="rounded-full bg-white/5 p-2 transition-all hover:bg-[#D4AF37] hover:text-black"
+                  className="rounded-xl border border-white/10 bg-white/5 p-2.5 transition-colors hover:border-[#D9B44A]/40 hover:text-[#D9B44A]"
                 >
-                  <Instagram size={20} />
+                  <Instagram size={18} />
                 </a>
                 <a
                   href={COMPANY_LINKS.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="rounded-full bg-white/5 p-2 transition-all hover:bg-[#D4AF37] hover:text-black"
+                  className="rounded-xl border border-white/10 bg-white/5 p-2.5 transition-colors hover:border-[#D9B44A]/40 hover:text-[#D9B44A]"
                 >
-                  <Facebook size={20} />
+                  <Facebook size={18} />
                 </a>
                 <a
                   href={COMPANY_LINKS.email}
                   aria-label="Enviar e-mail"
-                  className="rounded-full bg-white/5 p-2 transition-all hover:bg-[#D4AF37] hover:text-black"
+                  className="rounded-xl border border-white/10 bg-white/5 p-2.5 transition-colors hover:border-[#D9B44A]/40 hover:text-[#D9B44A]"
                 >
-                  <Mail size={20} />
+                  <Mail size={18} />
                 </a>
               </div>
             </div>
 
-            <div>
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Serviços</h4>
-              <ul className="flex flex-col gap-4 text-sm text-gray-400">
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados Aeroportuários</Link></li>
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Transporte Corporativo</Link></li>
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados para Praias</Link></li>
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Logística de Eventos</Link></li>
+            <div className="glass-panel rounded-3xl p-6">
+              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Servicos</h4>
+              <ul className="space-y-3 text-sm text-slate-300">
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados aeroportuarios</Link></li>
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Transporte corporativo</Link></li>
+                <li><Link to="/eventos" className="transition-colors hover:text-white">Logistica de eventos</Link></li>
+                <li><Link to="/fleet" className="transition-colors hover:text-white">Frota executiva</Link></li>
               </ul>
             </div>
 
-            <div>
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Áreas Atendidas</h4>
-              <ul className="flex flex-col gap-4 text-sm text-gray-400">
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> São Paulo (Capital)</li>
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Aeroporto GRU (Guarulhos)</li>
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Aeroporto CGH (Congonhas)</li>
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Aeroporto VCP (Viracopos)</li>
-                <li className="flex items-start gap-2"><MapPin size={16} className="shrink-0 text-[#D4AF37]" /> Alphaville e região central</li>
+            <div className="glass-panel rounded-3xl p-6">
+              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Areas atendidas</h4>
+              <ul className="space-y-3 text-sm text-slate-300">
+                <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Sao Paulo (Capital)</li>
+                <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Aeroporto GRU</li>
+                <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Aeroporto CGH</li>
+                <li className="flex items-start gap-2"><MapPin size={15} className="mt-0.5 shrink-0 text-[#D9B44A]" /> Aeroporto VCP</li>
               </ul>
             </div>
 
-            <div>
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-[#D4AF37]">Contato Rápido</h4>
-              <div className="flex flex-col gap-4 text-sm">
-                <a href={COMPANY_LINKS.phone} className="flex items-center gap-3 text-white transition-colors hover:text-[#D4AF37]">
-                  <Phone size={18} className="text-[#D4AF37]" />
+            <div className="glass-panel rounded-3xl p-6">
+              <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Contato rapido</h4>
+              <div className="space-y-3 text-sm">
+                <a href={COMPANY_LINKS.phone} className="flex items-center gap-3 text-white transition-colors hover:text-[#D9B44A]">
+                  <Phone size={16} className="text-[#D9B44A]" />
                   {COMPANY_INFO.phoneDisplay}
                 </a>
                 <a
                   href={COMPANY_LINKS.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-white transition-colors hover:text-[#D4AF37]"
+                  className="flex items-center gap-3 text-white transition-colors hover:text-[#D9B44A]"
                 >
-                  <MessageCircle size={18} className="text-[#D4AF37]" />
+                  <MessageCircle size={16} className="text-[#D9B44A]" />
                   Suporte via WhatsApp
                 </a>
-                <div className="flex items-center gap-3 text-gray-400">
-                  <CheckCircle2 size={18} className="text-[#D4AF37]" />
-                  Disponível 24/7
+                <div className="flex items-center gap-3 text-slate-300">
+                  <CheckCircle2 size={16} className="text-[#D9B44A]" />
+                  Disponivel 24/7
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row">
-            <p className="text-xs text-gray-500">
+          <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-7 md:flex-row">
+            <p className="text-xs text-slate-400">
               © {currentYear} {COMPANY_INFO.legalName}. Todos os direitos reservados. CNPJ: {COMPANY_INFO.cnpj}
             </p>
-            <div className="flex gap-6 text-xs text-gray-500">
-              <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Política de Privacidade</a>
+            <div className="flex gap-5 text-xs text-slate-400">
+              <a href={COMPANY_LINKS.privacyPolicy} className="transition-colors hover:text-white">Politica de Privacidade</a>
               <a href={COMPANY_LINKS.termsOfUse} className="transition-colors hover:text-white">Termos de Uso</a>
             </div>
           </div>
         </div>
       </footer>
 
-      <div className="fixed right-6 bottom-6 z-50 flex flex-col gap-3">
+      <div className="fixed right-5 bottom-5 z-50 flex flex-col gap-3">
         <a
           href={COMPANY_LINKS.phone}
-          className="hidden items-center justify-center rounded-full border border-black/10 bg-white p-4 text-black shadow-2xl transition-transform hover:scale-110 md:flex"
+          className="hidden items-center justify-center rounded-2xl border border-white/20 bg-white text-black shadow-xl transition-transform hover:scale-105 md:flex md:h-12 md:w-12"
           aria-label={`Ligar para ${COMPANY_INFO.phoneDisplay}`}
         >
-          <Phone size={24} />
+          <Phone size={20} />
         </a>
         <a
           href={COMPANY_LINKS.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-full bg-[#25D366] p-4 text-white shadow-2xl transition-transform hover:scale-110"
+          className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-[#25D366] text-white shadow-xl transition-transform hover:scale-105"
           aria-label="Conversar no WhatsApp"
         >
-          <MessageCircle size={28} fill="white" className="text-[#25D366]" />
+          <MessageCircle size={26} fill="white" className="text-[#25D366]" />
         </a>
       </div>
     </div>

@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   Shield,
   Clock,
   Award,
   ChevronRight,
-  Star,
   Car,
   Briefcase,
   Plane,
   MessageCircle,
   Phone,
   CheckCircle2,
+  Sparkles,
+  Radar,
 } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { SITE_IMAGES } from "@/app/config/siteImages";
@@ -20,111 +22,142 @@ import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 const features = [
   {
-    icon: <Shield className="text-[#D4AF37]" />,
-    title: "Viagem Segura",
-    desc: "Monitoramento em tempo real e protocolos rigorosos de segurança em cada atendimento.",
+    icon: <Shield className="text-[#D9B44A]" />,
+    title: "Segurança em primeiro lugar",
+    desc: "Operação monitorada em tempo real, com protocolos claros e rastreabilidade completa.",
   },
   {
-    icon: <Clock className="text-[#D4AF37]" />,
-    title: "Serviço 24/7",
-    desc: "Disponibilidade total para aeroportos, eventos e deslocamentos a qualquer hora.",
+    icon: <Clock className="text-[#5de5ff]" />,
+    title: "Precisão 24/7",
+    desc: "Atendimento contínuo para aeroportos, agendas corporativas e eventos de alto fluxo.",
   },
   {
-    icon: <Award className="text-[#D4AF37]" />,
-    title: "+20 Anos de Experiência",
-    desc: "Tradição, discrição e pontualidade em cada viagem.",
+    icon: <Award className="text-[#D9B44A]" />,
+    title: "Experiência de mercado",
+    desc: "Mais de 20 anos atendendo com consistência, profissionalismo e foco no detalhe.",
   },
   {
-    icon: <Car className="text-[#D4AF37]" />,
-    title: "Táxi Executivo",
-    desc: "Táxis pretos e brancos preparados para deslocamentos urbanos, corporativos e aeroportuários.",
+    icon: <Radar className="text-[#5de5ff]" />,
+    title: "Logística inteligente",
+    desc: "Roteiros ajustados por horário, trânsito e prioridade de embarque.",
   },
 ];
 
 const services = [
   {
     title: "Traslados Aeroportuários",
-    icon: <Plane size={40} className="text-[#D4AF37]" />,
+    icon: <Plane size={34} className="text-[#D9B44A]" />,
     img: SITE_IMAGES.airport,
-    desc: "Atendimento em GRU, CGH e VCP com saídas para a Capital, Paulista, Faria Lima, Itaim, Moema e Alphaville.",
+    desc: "Atendimento em GRU, CGH e VCP para saídas e chegadas com previsibilidade e conforto.",
   },
   {
-    title: "Logística Corporativa",
-    icon: <Briefcase size={40} className="text-[#D4AF37]" />,
+    title: "Mobilidade Corporativa",
+    icon: <Briefcase size={34} className="text-[#5de5ff]" />,
     img: SITE_IMAGES.corporate,
-    desc: "Atendimento para reuniões, hotéis e agendas executivas em Pinheiros, Jardins, Berrini, Vila Olímpia e região central.",
+    desc: "Suporte para agendas executivas, reuniões, roadshows e eventos empresariais.",
   },
   {
-    title: "Frota Executiva",
-    icon: <Car size={40} className="text-[#D4AF37]" />,
+    title: "Frota MarceloTaxi",
+    icon: <Car size={34} className="text-[#D9B44A]" />,
     img: SITE_IMAGES.fleet,
-    desc: "Frota brasileira com destaque para Chevrolet Spin, além de sedans nacionais, sempre limpos e revisados para traslados em São Paulo.",
+    desc: "Veículos limpos, revisados e prontos para manter seu deslocamento em padrão profissional.",
   },
 ];
 
 const comfortItems = [
-  "Água cortesia",
+  "Água de cortesia",
   "Wi-Fi de alta velocidade",
   "Carregadores de celular",
   "Ar-condicionado digital",
+  "Atendimento profissional",
+  "Ponto de embarque inteligente",
 ];
 
 export function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative flex h-[90vh] items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <ImageWithFallback
-            src={SITE_IMAGES.hero}
-            className="h-full w-full object-cover object-[center_52%] md:object-[center_48%] lg:object-[center_45%]"
-            alt="Chevrolet Spin Marcelo com avião ao fundo"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
-        </div>
+      <Helmet>
+        <title>MarceloTaxi | Transfer Executivo em São Paulo</title>
+        <meta
+          name="description"
+          content="MarceloTaxi oferece transfer executivo em São Paulo, com atendimento 24/7 para aeroportos, corporativo e eventos."
+        />
+      </Helmet>
 
-        <div className="container relative z-10 mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl"
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#D4AF37]">
-              <Star size={14} className="fill-[#D4AF37]" />
-              Atendimento executivo de alto padrão em São Paulo
-            </div>
-            <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
-              Mobilidade <span className="text-[#D4AF37]">Executiva</span> com conforto e pontualidade
-            </h1>
-            <p className="mb-10 max-w-lg text-xl leading-relaxed text-gray-300">
-              Traslados premium para aeroportos, compromissos corporativos e eventos, com atendimento discreto e confiável em São Paulo.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href={COMPANY_LINKS.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-8 py-4 text-lg font-bold text-black transition-all hover:-translate-y-1 hover:bg-[#B8860B]"
-              >
-                AGENDAR AGORA
-                <ChevronRight size={20} />
-              </a>
-              <Link
-                to="/transfers"
-                className="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-md transition-all hover:bg-white/20"
-              >
-                NOSSOS SERVIÇOS
-              </Link>
-            </div>
-          </motion.div>
+      <section className="relative min-h-[88vh] overflow-hidden border-b border-white/10">
+        <ImageWithFallback
+          src={SITE_IMAGES.hero}
+          className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
+          alt="Táxi com avião ao fundo"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#04070f]/92 via-[#04070f]/75 to-[#04070f]/48" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04070f]/70 via-transparent to-[#04070f]/20" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:42px_42px] opacity-30" />
+
+        <div className="container relative z-10 mx-auto flex justify-center px-4 py-16 md:py-24 lg:py-28">
+          <div className="w-full max-w-5xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="glass-panel mx-auto w-full max-w-4xl rounded-3xl p-7 text-center md:p-12"
+            >
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#5de5ff]/35 bg-[#5de5ff]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#5de5ff]">
+                <Sparkles size={14} />
+                Mais de 20 anos em São Paulo
+              </div>
+              <h1 className="mb-6 text-5xl font-black leading-[1.02] md:text-7xl">
+                Táxi executivo com
+                <span className="mt-2 block text-[#D9B44A]">
+                  pontualidade e confiança
+                </span>
+              </h1>
+              <p className="mx-auto mb-8 max-w-2xl rounded-2xl border border-[#D9B44A]/35 bg-black/40 px-5 py-4 text-lg font-black leading-tight text-[#f7e5b6] md:text-xl">
+                Transportamos o que há de mais valioso.
+              </p>
+
+              <div className="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href={COMPANY_LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-cta inline-flex items-center justify-center gap-2 rounded-full border border-[#D9B44A] bg-[#D9B44A] px-8 py-4 text-base font-black text-black transition-all hover:-translate-y-0.5 hover:bg-[#c79d36]"
+                >
+                  AGENDAR AGORA
+                  <ChevronRight size={18} />
+                </a>
+                <Link
+                  to="/eventos"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/[0.06] px-8 py-4 text-base font-black text-white transition-colors hover:bg-white/[0.12]"
+                >
+                  VER EVENTOS
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-1 gap-3 text-center sm:grid-cols-3">
+                <div className="rounded-xl border border-white/10 bg-black/45 px-4 py-3 text-sm">
+                  <p className="font-bold text-[#D9B44A]">20+ anos</p>
+                  <p className="text-slate-300">Operação executiva</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-black/45 px-4 py-3 text-sm">
+                  <p className="font-bold text-[#5de5ff]">24/7</p>
+                  <p className="text-slate-300">Atendimento ativo</p>
+                </div>
+                <div className="rounded-xl border border-white/10 bg-black/45 px-4 py-3 text-sm">
+                  <p className="font-bold text-[#D9B44A]">SP + aeroportos</p>
+                  <p className="text-slate-300">Cobertura estratégica</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="border-y border-[#D4AF37]/10 bg-[#0A0A0A] py-12">
+      <section className="border-y border-white/10 bg-[#070d1a]/70 py-14">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -132,129 +165,132 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex flex-col items-center gap-3 text-center"
+                className="glass-panel rounded-2xl p-5"
               >
-                <div className="rounded-2xl bg-white/5 p-3">
-                  {React.cloneElement(feature.icon as React.ReactElement, { size: 32 })}
+                <div className="mb-3 inline-flex rounded-xl border border-white/10 bg-white/5 p-2.5">
+                  {React.cloneElement(feature.icon as React.ReactElement, { size: 24 })}
                 </div>
-                <h3 className="text-lg font-bold">{feature.title}</h3>
-                <p className="max-w-[200px] text-sm text-gray-500">{feature.desc}</p>
+                <h3 className="mb-2 text-lg font-black">{feature.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-300">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-black py-24">
+      <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="mb-16 flex flex-col items-end justify-between gap-6 md:flex-row">
+          <div className="mb-12 flex flex-col items-start justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">Soluções em São Paulo</h2>
-              <h3 className="text-4xl font-bold md:text-5xl">Serviços</h3>
+              <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#5de5ff]">Arquitetura de serviços</p>
+              <h2 className="text-4xl font-black md:text-5xl">Soluções de mobilidade</h2>
             </div>
-            <Link to="/transfers" className="group flex items-center gap-2 font-bold text-[#D4AF37]">
-              VER TODOS OS SERVIÇOS
-              <ChevronRight size={20} className="transition-transform group-hover:translate-x-1" />
+            <Link to="/transfers" className="group inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.1em] text-[#D9B44A]">
+              Ver todos os serviços
+              <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-7 lg:grid-cols-3">
             {services.map((service, index) => (
-              <motion.div
+              <motion.article
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group relative h-[400px] overflow-hidden rounded-3xl"
+                transition={{ delay: index * 0.08 }}
+                className="group relative overflow-hidden rounded-3xl border border-white/10"
               >
                 <ImageWithFallback
                   src={service.img}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   alt={service.title}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <div className="mb-4">{service.icon}</div>
-                  <h4 className="mb-2 text-2xl font-bold">{service.title}</h4>
-                  <p className="text-sm text-gray-300">{service.desc}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-end p-7">
+                  <div className="mb-4 inline-flex w-fit rounded-xl border border-white/20 bg-black/50 p-2">{service.icon}</div>
+                  <h3 className="mb-2 text-2xl font-black">{service.title}</h3>
+                  <p className="text-sm text-slate-200">{service.desc}</p>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#0A0A0A] py-24">
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div className="relative">
-              <div className="aspect-square overflow-hidden rounded-3xl border-2 border-[#D4AF37]/20">
+              <div className="absolute -inset-4 rounded-[2.2rem] bg-gradient-to-br from-[#5de5ff]/20 to-[#D9B44A]/15 blur-xl" />
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
                 <ImageWithFallback
                   src={SITE_IMAGES.service}
                   className="h-full w-full object-cover"
-                  alt="Táxi branco e preto em serviço"
+                  alt="Táxi executivo em serviço"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 max-w-[240px] rounded-3xl bg-[#D4AF37] p-8 text-black shadow-2xl">
-                <div className="mb-1 text-4xl font-bold">20+</div>
-                <div className="text-sm font-bold uppercase tracking-wider">Anos de Experiência</div>
+              <div className="absolute right-5 bottom-5 rounded-2xl border border-[#D9B44A]/30 bg-black/75 px-5 py-4 backdrop-blur">
+                <p className="text-3xl font-black text-[#D9B44A]">20+</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-200">Anos de experiência</p>
               </div>
             </div>
+
             <div>
-              <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#D4AF37]">Conforto Absoluto</h2>
-              <h3 className="mb-8 text-4xl font-bold leading-tight md:text-5xl">
-                Mais de duas décadas de excelência em transporte executivo
-              </h3>
-              <p className="mb-8 text-lg leading-relaxed text-gray-400">
-                Nosso compromisso é transformar cada deslocamento em uma experiência tranquila, confortável e eficiente. Por isso, mantemos os veículos higienizados, revisados e prontos para atender com o padrão que sua rotina exige.
+              <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Conforto e tecnologia</p>
+              <h2 className="mb-6 text-4xl font-black leading-tight md:text-5xl">
+                Deslocamento executivo do primeiro ao último minuto
+              </h2>
+              <p className="mb-8 text-lg leading-relaxed text-slate-300">
+                Da reserva ao desembarque, cada detalhe é pensado para reduzir atrito na sua rotina e elevar a experiência de transporte.
               </p>
-              <ul className="mb-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <ul className="mb-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {comfortItems.map((item) => (
-                  <li key={item} className="flex items-center gap-3 font-medium text-white">
-                    <CheckCircle2 size={18} className="text-[#D4AF37]" />
+                  <li key={item} className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-semibold text-slate-200">
+                    <CheckCircle2 size={16} className="text-[#D9B44A]" />
                     {item}
                   </li>
                 ))}
               </ul>
               <Link
                 to="/onboard"
-                className="inline-flex items-center gap-2 border-b-2 border-[#D4AF37] py-2 font-bold text-[#D4AF37] transition-all hover:gap-4"
+                className="inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/40 px-6 py-3 text-sm font-black uppercase tracking-[0.1em] text-[#D9B44A] transition-colors hover:bg-[#D9B44A] hover:text-black"
               >
-                DESCUBRA OS SERVIÇOS DE BORDO
+                Serviços de bordo
+                <ChevronRight size={16} />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-black py-24">
+      <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center rounded-[40px] bg-[#D4AF37] p-8 text-center text-black md:p-16">
-            <h2 className="mb-8 text-4xl font-black leading-tight md:text-6xl">
-              Pronto para agendar seu <br />
-              próximo traslado?
-            </h2>
-            <p className="mb-12 max-w-2xl text-lg font-medium opacity-80 md:text-xl">
-              Solicite um orçamento imediato e reserve seu atendimento via WhatsApp. Nossa equipe está disponível 24 horas por dia, 7 dias por semana.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href={COMPANY_LINKS.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whatsapp-cta flex items-center justify-center gap-3 rounded-full border-2 border-black bg-white px-10 py-5 text-xl font-bold text-black transition-colors"
-              >
-                <MessageCircle size={24} />
-                CHAT WHATSAPP
-              </a>
-              <a
-                href={COMPANY_LINKS.phone}
-                className="flex items-center justify-center gap-3 rounded-full border-2 border-black bg-transparent px-10 py-5 text-xl font-bold text-black transition-colors hover:bg-black/10"
-              >
-                <Phone size={24} />
-                LIGAR AGORA ({COMPANY_INFO.phoneDisplay})
-              </a>
+          <div className="relative overflow-hidden rounded-[2.2rem] border border-[#D9B44A]/30 bg-gradient-to-br from-[#D9B44A] via-[#e3c164] to-[#a57d21] p-8 text-black md:p-14">
+            <div className="pointer-events-none absolute top-0 right-0 h-56 w-56 rounded-full bg-white/20 blur-3xl" />
+            <div className="relative z-10 text-center">
+              <h2 className="mb-6 text-4xl font-black leading-tight md:text-6xl">Pronto para o próximo traslado?</h2>
+              <p className="mx-auto mb-10 max-w-3xl text-lg font-semibold opacity-85 md:text-xl">
+                Receba confirmação rápida no WhatsApp e reserve sua operação com atendimento profissional em São Paulo.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href={COMPANY_LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-cta inline-flex items-center justify-center gap-3 rounded-full border-2 border-black bg-white px-9 py-4 text-base font-black text-black transition-colors"
+                >
+                  <MessageCircle size={20} />
+                  CHAT WHATSAPP
+                </a>
+                <a
+                  href={COMPANY_LINKS.phone}
+                  className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-black bg-transparent px-9 py-4 text-base font-black text-black transition-colors hover:bg-black/10"
+                >
+                  <Phone size={20} />
+                  LIGAR AGORA ({COMPANY_INFO.phoneDisplay})
+                </a>
+              </div>
             </div>
           </div>
         </div>

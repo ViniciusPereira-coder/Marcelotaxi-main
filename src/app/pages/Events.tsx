@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   CalendarDays,
   MapPin,
@@ -19,15 +20,15 @@ import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 const EVENT_CONFIG = {
   title: "Eventos",
   highlight: "Lollapalooza Brasil",
-  season: "Edicao 2026",
-  city: "Sao Paulo",
-  location: "Autodromo de Interlagos - SP",
-  dates: "20, 21 e 22 de marco de 2026",
+  season: "Edição 2026",
+  city: "São Paulo",
+  location: "Autódromo de Interlagos - SP",
+  dates: "20, 21 e 22 de março de 2026",
   opening: "Abertura de portas: 11h",
-  lastEntry: "Ultima entrada: 22h30",
+  lastEntry: "Última entrada: 22h30",
   endTime: "Encerramento do evento: 1h",
   summary:
-    "Pagina pronta para conversao. Ja configurada com informacoes oficiais para voce vender o transporte de ida e volta do Lolla.",
+    "Página preparada para conversão, com informações oficiais e foco em vendas de transporte de ida e volta para o Lolla.",
 };
 
 const OFFICIAL_LINKS = {
@@ -42,10 +43,10 @@ const OFFICIAL_LINKS = {
 
 const FLYER_CONFIG = {
   title: "Flyer Lolla 2026",
-  subtitle: "Area pronta para destaque visual do evento",
+  subtitle: "Área pronta para destaque visual do evento",
   image:
     "https://cdn.prod.website-files.com/646fa99d0892704eb2b38032/69a0cf5fdd13f7acfa1ebb1a_IG_FEED_LINEUP_DIA_25.02_PH_V20_02.webp",
-  note: "Voce pode trocar a imagem do flyer por um criativo proprio quando quiser.",
+  note: "Você pode trocar a imagem do flyer por um criativo próprio quando quiser.",
 };
 
 const eventDays = [
@@ -53,55 +54,52 @@ const eventDays = [
     dayLabel: "Sexta",
     date: "20/03/2026",
     highlight: "Abertura oficial do festival",
-    lineup: "Line-up e horarios oficiais no link abaixo",
   },
   {
-    dayLabel: "Sabado",
+    dayLabel: "Sábado",
     date: "21/03/2026",
     highlight: "Dia de maior fluxo",
-    lineup: "Line-up e horarios oficiais no link abaixo",
   },
   {
     dayLabel: "Domingo",
     date: "22/03/2026",
     highlight: "Encerramento do festival",
-    lineup: "Line-up e horarios oficiais no link abaixo",
   },
 ];
 
 const pickupPoints = [
   "Aeroporto de Congonhas (CGH)",
   "Aeroporto de Guarulhos (GRU)",
-  "Hoteis na Av. Paulista e Jardins",
-  "Berrini, Vila Olimpia e Faria Lima",
+  "Hotéis na Av. Paulista e Jardins",
+  "Berrini, Vila Olímpia e Faria Lima",
   "Pinheiros, Itaim e Vila Madalena",
 ];
 
 const packageOptions = [
   {
     name: "Pacote Ida",
-    description: "Chegada planejada antes da abertura dos portoes, sem correria.",
+    description: "Chegada planejada antes da abertura dos portões, sem correria.",
   },
   {
     name: "Pacote Ida e Volta",
-    description: "Retorno seguro em ponto combinado apos os shows.",
+    description: "Retorno seguro em ponto combinado após os shows.",
   },
   {
     name: "Pacote 3 Dias",
-    description: "Operacao completa para os 3 dias do festival com prioridade de agenda.",
+    description: "Operação completa para os 3 dias do festival, com prioridade de agenda.",
   },
 ];
 
 const checklist = [
-  "Roteiro alinhado com horario oficial de abertura e encerramento",
-  "Ponto de embarque e ponto de retorno definidos com antecedencia",
-  "Atendimento no WhatsApp durante toda a operacao",
-  "Suporte para grupos e empresas com multiplos carros",
+  "Roteiro alinhado com horário oficial de abertura e encerramento",
+  "Ponto de embarque e ponto de retorno definidos com antecedência",
+  "Atendimento no WhatsApp durante toda a operação",
+  "Suporte para grupos e empresas com múltiplos carros",
 ];
 
 const quickLinks = [
   { label: "Ingressos", href: OFFICIAL_LINKS.ingressos },
-  { label: "Line-up e Horarios", href: OFFICIAL_LINKS.horarios },
+  { label: "Line-up e Horários", href: OFFICIAL_LINKS.horarios },
   { label: "FAQ Oficial", href: OFFICIAL_LINKS.information },
   { label: "Transportes Oficiais", href: OFFICIAL_LINKS.transportes },
 ];
@@ -113,6 +111,14 @@ const whatsappEventLink = `${COMPANY_LINKS.whatsapp}?text=${encodeURIComponent(
 export function Events() {
   return (
     <div className="flex flex-col bg-black">
+      <Helmet>
+        <title>Eventos | MarceloTaxi e Lollapalooza Brasil</title>
+        <meta
+          name="description"
+          content="Landing de eventos MarceloTaxi com foco em Lollapalooza Brasil: transporte de ida e volta, pacotes e links oficiais."
+        />
+      </Helmet>
+
       <section className="border-b border-[#D4AF37]/20 bg-gradient-to-b from-[#111111] to-black py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -173,7 +179,7 @@ export function Events() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border-b-2 border-[#D4AF37] pb-1 font-bold text-[#D4AF37] transition-all hover:gap-3"
               >
-                VER LINE-UP E HORARIOS OFICIAIS
+                VER LINE-UP E HORÁRIOS OFICIAIS
                 <ArrowRight size={18} />
               </a>
             </div>
@@ -192,7 +198,7 @@ export function Events() {
         <div className="container mx-auto px-4">
           <div className="mb-10 flex items-center gap-3">
             <CalendarDays className="text-[#D4AF37]" />
-            <h2 className="text-3xl font-bold md:text-4xl">Programacao por Dia</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">Programação por Dia</h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {eventDays.map((day, index) => (
@@ -206,8 +212,7 @@ export function Events() {
               >
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#D4AF37]">{day.dayLabel}</p>
                 <h3 className="mb-2 text-2xl font-bold">{day.date}</h3>
-                <p className="mb-4 text-sm text-gray-300">{day.highlight}</p>
-                <p className="text-sm text-gray-500">{day.lineup}</p>
+                <p className="text-sm text-gray-300">{day.highlight}</p>
               </motion.article>
             ))}
           </div>
@@ -302,7 +307,7 @@ export function Events() {
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="mb-8 text-3xl font-bold md:text-4xl">Checklist de Operacao</h2>
+          <h2 className="mb-8 text-3xl font-bold md:text-4xl">Checklist de Operação</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {checklist.map((item) => (
               <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black p-5">

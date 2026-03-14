@@ -1,7 +1,7 @@
 export const COMPANY_INFO = {
   brandInitials: "MT",
-  brandName: "MARCELO",
-  brandTagline: "TAXI PREMIUM",
+  brandName: "MARCELO TAXI",
+  brandTagline: "",
   legalName: "MarceloTaxi",
   city: "São Paulo",
   phoneDisplay: "+55 11 92206-1435",

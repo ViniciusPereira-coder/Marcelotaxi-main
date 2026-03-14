@@ -1,9 +1,32 @@
 import React, { Suspense } from "react";
 import { RouterProvider } from "react-router";
 import { MotionConfig } from "motion/react";
+import Lenis from "lenis";
 import { preloadRouteChunks, router } from "./routes";
 
 export default function App() {
+  React.useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.05,
+      smoothWheel: true,
+      touchMultiplier: 1.2,
+      wheelMultiplier: 0.95,
+    });
+
+    let rafId = 0;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = window.requestAnimationFrame(raf);
+    };
+
+    rafId = window.requestAnimationFrame(raf);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
+
   React.useEffect(() => {
     const startPreload = () => preloadRouteChunks();
 
