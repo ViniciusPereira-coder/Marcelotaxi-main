@@ -18,6 +18,11 @@ import type { LucideIcon } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
+import transladoAviaoPousando from "@/app/assets/photos/Transaldo avião pousando.jpg";
+import aeroportoCompanhias from "@/app/assets/photos/outro aeroporto sp.jpg";
+import litoralPhoto from "@/app/assets/photos/Litoral.jpg";
+import casamentoPhoto from "@/app/assets/photos/CASAMENTO.jpg";
+import berriniPhoto from "@/app/assets/photos/Berrini noite.jpg";
 
 type TransferService = {
   title: string;
@@ -35,17 +40,17 @@ const transferServices: TransferService[] = [
     subtitle: "Chegadas e partidas com monitoramento de voo",
     description:
       "Operacao organizada para GRU, CGH e VCP com acompanhamento em tempo real, recepcao alinhada ao horario do voo e embarque sem correria.",
-    image: SITE_IMAGES.airport,
+    image: aeroportoCompanhias,
     icon: Plane,
     tags: ["Guarulhos (GRU)", "Congonhas (CGH)", "Viracopos (VCP)"],
-    benefits: ["Recepcao com placa", "Janela de espera inclusa", "Roteiro otimizado", "Motorista profissional"],
+    benefits: ["Janela de espera inclusa", "Roteiro otimizado", "Motorista profissional", "Flexibilidade para ajustes de horario"],
   },
   {
     title: "Mobilidade Corporativa",
     subtitle: "Agenda executiva com previsibilidade",
     description:
       "Atendimento para reunioes, roadshows e compromissos estrategicos, com pontualidade e suporte para rotas multiplas no mesmo dia.",
-    image: SITE_IMAGES.corporate,
+    image: berriniPhoto,
     icon: Building2,
     tags: ["Faria Lima", "Berrini", "Paulista", "Alphaville"],
     benefits: ["Atendimento profissional", "Faturamento mensal", "Veiculos executivos", "Planejamento de agenda"],
@@ -55,7 +60,7 @@ const transferServices: TransferService[] = [
     subtitle: "Viagens longas com conforto",
     description:
       "Deslocamentos para litoral e interior com operacao porta a porta, conforto de bordo e foco em seguranca durante todo o trajeto.",
-    image: SITE_IMAGES.fleet,
+    image: litoralPhoto,
     icon: Palmtree,
     tags: ["Santos e Guaruja", "Ilhabela", "Campos do Jordao", "Sorocaba"],
     benefits: ["Capacidade para bagagem", "Paradas programadas", "Pedagios no planejamento", "Conducao segura"],
@@ -65,7 +70,7 @@ const transferServices: TransferService[] = [
     subtitle: "Logistica completa para grupos e familias",
     description:
       "Coordenacao de transporte para eventos sociais e corporativos com embarque organizado, ponto de retorno definido e atendimento continuo.",
-    image: SITE_IMAGES.service,
+    image: casamentoPhoto,
     icon: CalendarDays,
     tags: ["Sao Paulo Capital", "Regiao Metropolitana", "Interior proximo"],
     benefits: ["Equipe em prontidao", "Multiplos veiculos", "Pontos de encontro definidos", "Suporte no WhatsApp"],
@@ -80,10 +85,11 @@ const operationPillars = [
 ];
 
 const coverageAreas = [
-  "Sao Paulo (capital)",
+  "Sao Paulo",
   "Aeroportos GRU, CGH e VCP",
   "Bairros corporativos e hoteis",
   "Litoral norte, litoral sul e interior",
+  "Atendimento para outros estados sob consulta",
 ];
 
 export function Transfers() {
@@ -99,7 +105,7 @@ export function Transfers() {
 
       <section className="relative overflow-hidden border-b border-white/10 py-20 md:py-24">
         <ImageWithFallback
-          src={SITE_IMAGES.airport}
+          src={transladoAviaoPousando}
           alt="Traslado executivo em Sao Paulo"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
@@ -122,7 +128,7 @@ export function Transfers() {
               <span className="block text-[#D9B44A]">pontualidade, conforto e controle de rota</span>
             </h1>
             <p className="mb-10 max-w-3xl text-lg text-slate-200 md:text-xl">
-              Atendemos aeroportos, compromissos corporativos, viagens para litoral/interior e eventos com um padrao unico de atendimento.
+              Atendemos aeroportos, compromissos corporativos, viagens para litoral/interior e eventos com um padrao unico de atendimento, incluindo outros estados sob consulta.
             </p>
 
             <div className="mb-10 flex flex-col gap-4 sm:flex-row">
@@ -167,7 +173,7 @@ export function Transfers() {
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Nossos Servicos</p>
-              <h2 className="text-4xl font-black md:text-5xl">Cards de atendimento por perfil</h2>
+              <h2 className="text-4xl font-black md:text-5xl">O que oferecemos</h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-slate-300 md:text-right">
               Cada servico foi desenhado para acelerar a decisao de compra: escopo claro, beneficios objetivos e acionamento imediato.
