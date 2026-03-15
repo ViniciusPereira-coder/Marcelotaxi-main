@@ -215,7 +215,7 @@ export function Root() {
             <div className="glass-panel rounded-3xl p-6">
               <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Serviços</h4>
               <ul className="space-y-3 text-sm text-slate-300">
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados aeroportuários</Link></li>
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Translados aeroportuários</Link></li>
                 <li><Link to="/transfers" className="transition-colors hover:text-white">Transporte corporativo</Link></li>
                 <li><Link to="/eventos" className="transition-colors hover:text-white">Logística de eventos</Link></li>
                 <li><Link to="/fleet" className="transition-colors hover:text-white">Frota executiva</Link></li>

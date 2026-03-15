@@ -6,7 +6,7 @@ export const COMPANY_INFO = {
   city: "São Paulo",
   phoneDisplay: "+55 11 92206-1435",
   phoneDigits: "5511922061435",
-  email: "contato@marcelotaxi.com.br",
+  email: "marcelo.spereira41@gmail.com",
   cnpj: "00.000.000/0001-00",
 } as const;
 
