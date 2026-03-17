@@ -5,9 +5,6 @@ import {
   MessageCircle,
   Menu,
   X,
-  Instagram,
-  Facebook,
-  Mail,
   MapPin,
   CheckCircle2,
   Sparkles,
@@ -39,7 +36,7 @@ export function Root() {
             <img
               src={mtTransparentLogo}
               alt={`Logo ${COMPANY_INFO.brandName}`}
-              className="h-14 w-auto object-contain"
+              className="h-22 w-auto object-contain"
             />
             <div>
               <span className="block font-['Cinzel'] text-[1.32rem] font-bold leading-none tracking-[0.08em] text-white uppercase">
@@ -171,7 +168,7 @@ export function Root() {
                 <img
                   src={mtTransparentLogo}
                   alt={`Logo ${COMPANY_INFO.brandName}`}
-                  className="h-12 w-auto object-contain"
+                  className="h-14 w-auto object-contain"
                 />
                 <div>
                   <span className="block font-['Cinzel'] text-[1.08rem] font-bold leading-none tracking-[0.08em] text-white uppercase">
@@ -187,33 +184,6 @@ export function Root() {
               <p className="text-sm leading-relaxed text-slate-300">
                 Transporte executivo em {COMPANY_INFO.city}, com tecnologia operacional, pontualidade e atendimento humano.
               </p>
-              <div className="mt-5 flex gap-3">
-                <a
-                  href={COMPANY_LINKS.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="rounded-xl border border-white/10 bg-white/5 p-2.5 transition-colors hover:border-[#D9B44A]/40 hover:text-[#D9B44A]"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href={COMPANY_LINKS.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="rounded-xl border border-white/10 bg-white/5 p-2.5 transition-colors hover:border-[#D9B44A]/40 hover:text-[#D9B44A]"
-                >
-                  <Facebook size={18} />
-                </a>
-                <a
-                  href={COMPANY_LINKS.email}
-                  aria-label="Enviar e-mail"
-                  className="rounded-xl border border-white/10 bg-white/5 p-2.5 transition-colors hover:border-[#D9B44A]/40 hover:text-[#D9B44A]"
-                >
-                  <Mail size={18} />
-                </a>
-              </div>
             </div>
 
             <div className="glass-panel rounded-3xl p-6">
@@ -272,14 +242,7 @@ export function Root() {
         </div>
       </footer>
 
-      <div className="fixed right-5 bottom-5 z-50 flex flex-col gap-3">
-        <a
-          href={COMPANY_LINKS.phone}
-          className="hidden items-center justify-center rounded-2xl border border-white/20 bg-white text-black shadow-xl transition-transform hover:scale-105 md:flex md:h-12 md:w-12"
-          aria-label={`Ligar para ${COMPANY_INFO.phoneDisplay}`}
-        >
-          <Phone size={20} />
-        </a>
+      <div className="fixed right-5 bottom-5 z-50">
         <a
           href={COMPANY_LINKS.whatsapp}
           target="_blank"
@@ -290,6 +253,7 @@ export function Root() {
           <MessageCircle size={26} fill="white" className="text-[#25D366]" />
         </a>
       </div>
+
     </div>
   );
 }
