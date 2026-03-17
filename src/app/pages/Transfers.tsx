@@ -18,7 +18,7 @@ import type { LucideIcon } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
-import transladoAviaoPousando from "@/app/assets/photos/Transaldo avião pousando.jpg";
+import trasladoAviaoPousando from "@/app/assets/photos/Transaldo avião pousando.jpg";
 import aeroportoCompanhias from "@/app/assets/photos/outro aeroporto sp.jpg";
 import litoralPhoto from "@/app/assets/photos/Litoral.jpg";
 import casamentoPhoto from "@/app/assets/photos/CASAMENTO.jpg";
@@ -36,7 +36,7 @@ type TransferService = {
 
 const transferServices: TransferService[] = [
   {
-    title: "Translados de Aeroporto",
+    title: "Traslados de Aeroporto",
     subtitle: "Chegadas e partidas com monitoramento de voo",
     description:
       "Operacao organizada para GRU, CGH e VCP com acompanhamento em tempo real, recepcao alinhada ao horario do voo e embarque sem correria.",
@@ -96,17 +96,17 @@ export function Transfers() {
   return (
     <div className="flex flex-col bg-[#05080f]">
       <Helmet>
-        <title>Translados | MarceloTaxi</title>
+        <title>Traslados | MarceloTaxi</title>
         <meta
           name="description"
-          content="Translados executivos em Sao Paulo com operacao profissional para aeroportos, corporativo, litoral, interior e eventos."
+          content="Traslados executivos em Sao Paulo com operacao profissional para aeroportos, corporativo, litoral, interior e eventos."
         />
       </Helmet>
 
       <section className="relative overflow-hidden border-b border-white/10 py-20 md:py-24">
         <ImageWithFallback
-          src={transladoAviaoPousando}
-          alt="Translado executivo em Sao Paulo"
+          src={trasladoAviaoPousando}
+          alt="Traslado executivo em Sao Paulo"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#05080f]/92 via-[#05080f]/78 to-[#05080f]/55" />
@@ -124,7 +124,7 @@ export function Transfers() {
               Operacao Profissional 24/7
             </div>
             <h1 className="mb-6 text-4xl font-black leading-tight md:text-6xl">
-              Translados executivos com
+              Traslados executivos com
               <span className="block text-[#D9B44A]">pontualidade, conforto e controle de rota</span>
             </h1>
             <p className="mb-10 max-w-3xl text-lg text-slate-200 md:text-xl">
@@ -233,7 +233,7 @@ export function Transfers() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.08em] text-[#D9B44A] transition-colors hover:text-[#f1cd74]"
                     >
-                      Solicitar esse translado
+                      Solicitar esse traslado
                       <ArrowRight size={16} />
                     </a>
                   </div>
@@ -290,7 +290,7 @@ export function Transfers() {
             <div className="pointer-events-none absolute top-0 right-0 h-56 w-56 rounded-full bg-white/20 blur-3xl" />
             <div className="relative z-10 text-center">
               <h2 className="mb-6 text-4xl font-black leading-tight md:text-6xl">
-                Pronto para confirmar seu translado?
+                Pronto para confirmar seu traslado?
               </h2>
               <p className="mx-auto mb-10 max-w-3xl text-lg font-semibold opacity-90 md:text-xl">
                 Receba retorno rapido no WhatsApp, valide a rota ideal e reserve seu transporte com atendimento profissional.

@@ -16,6 +16,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Toaster } from "sonner";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { NAV_LINKS } from "@/app/config/navigation";
+import mtTransparentLogo from "@/app/assets/photos/MT_transparent Logo.png";
 
 export function Root() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -35,10 +36,11 @@ export function Root() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-[#442f00]/25" />
         <div className="container relative mx-auto flex h-[84px] items-center justify-between px-4">
           <Link to="/" className="group flex items-center gap-3">
-            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-[#D9B44A]/60 bg-black">
-              <span className="text-lg font-black text-[#D9B44A]">{COMPANY_INFO.brandInitials}</span>
-              <div className="absolute top-1 right-1 h-1.5 w-1.5 rounded-full bg-[#D9B44A]" />
-            </div>
+            <img
+              src={mtTransparentLogo}
+              alt={`Logo ${COMPANY_INFO.brandName}`}
+              className="h-12 w-auto object-contain"
+            />
             <div>
               <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
                 {COMPANY_INFO.brandName}
@@ -166,9 +168,11 @@ export function Root() {
           <div className="mb-14 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
             <div className="glass-panel rounded-3xl p-6">
               <Link to="/" className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#D9B44A]/60 bg-black">
-                  <span className="font-black text-[#D9B44A]">{COMPANY_INFO.brandInitials}</span>
-                </div>
+                <img
+                  src={mtTransparentLogo}
+                  alt={`Logo ${COMPANY_INFO.brandName}`}
+                  className="h-10 w-auto object-contain"
+                />
                 <div>
                   <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
                     {COMPANY_INFO.brandName}
@@ -215,7 +219,7 @@ export function Root() {
             <div className="glass-panel rounded-3xl p-6">
               <h4 className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Serviços</h4>
               <ul className="space-y-3 text-sm text-slate-300">
-                <li><Link to="/transfers" className="transition-colors hover:text-white">Translados aeroportuários</Link></li>
+                <li><Link to="/transfers" className="transition-colors hover:text-white">Traslados aeroportuários</Link></li>
                 <li><Link to="/transfers" className="transition-colors hover:text-white">Transporte corporativo</Link></li>
                 <li><Link to="/eventos" className="transition-colors hover:text-white">Logística de eventos</Link></li>
                 <li><Link to="/fleet" className="transition-colors hover:text-white">Frota executiva</Link></li>

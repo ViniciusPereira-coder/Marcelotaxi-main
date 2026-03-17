@@ -43,7 +43,7 @@ export function About() {
                   <div className="text-sm font-bold uppercase tracking-wider text-white">Viagens Concluídas</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#D4AF37] mb-2">99%</div>
+                  <div className="text-4xl font-bold text-[#D4AF37] mb-2">100%</div>
                   <div className="text-sm font-bold uppercase tracking-wider text-white">Satisfação dos Clientes</div>
                 </div>
               </div>

@@ -45,7 +45,7 @@ const features = [
 
 const services = [
   {
-    title: "Translados Aeroportuarios",
+    title: "Traslados Aeroportuarios",
     icon: <Plane size={34} className="text-[#D9B44A]" />,
     img: SITE_IMAGES.airport,
     desc: "Atendimento em GRU, CGH e VCP para saidas e chegadas com previsibilidade e conforto.",
@@ -261,7 +261,7 @@ export function Home() {
           <div className="relative overflow-hidden rounded-[2.2rem] border border-[#D9B44A]/30 bg-gradient-to-br from-[#D9B44A] via-[#e3c164] to-[#a57d21] p-8 text-black md:p-14">
             <div className="pointer-events-none absolute top-0 right-0 h-56 w-56 rounded-full bg-white/20 blur-3xl" />
             <div className="relative z-10 text-center">
-              <h2 className="mb-6 text-4xl font-black leading-tight md:text-6xl">Pronto para o proximo translado?</h2>
+              <h2 className="mb-6 text-4xl font-black leading-tight md:text-6xl">Pronto para o proximo traslado?</h2>
               <p className="mx-auto mb-10 max-w-3xl text-lg font-semibold opacity-85 md:text-xl">
                 Receba confirmacao rapida no WhatsApp e reserve sua viagem com atendimento profissional em Sao Paulo.
               </p>
