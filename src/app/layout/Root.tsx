@@ -64,7 +64,7 @@ export function Root() {
                         <motion.span
                           layoutId="desktop-nav-active-pill"
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                          className="absolute inset-0 rounded-full bg-gradient-to-r from-[#f6f6f6] via-[#ffffff] to-[#D9B44A]"
+                          className="absolute inset-0 rounded-full bg-[linear-gradient(90deg,#f8f3df_0%,#D9B44A_46%,#0b0b0b_100%)] shadow-[inset_0_0_0_1px_rgba(217,180,74,0.5),0_8px_18px_rgba(0,0,0,0.35)]"
                         />
                       ) : null}
                       <span className={`relative z-10 transition-colors ${isActive ? "text-black" : "text-slate-200 hover:text-white"}`}>

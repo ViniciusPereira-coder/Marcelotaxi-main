@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Phone, MessageCircle, Mail, Clock, CheckCircle2, ArrowRight } from "lucide-react";
+import { Phone, MessageCircle, Mail, ArrowRight } from "lucide-react";
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 
 export function Contact() {
@@ -60,19 +60,6 @@ export function Contact() {
                   </div>
                 </a>
 
-                <div className="flex items-start gap-6">
-                  <div className="rounded-2xl bg-white/5 p-4 text-white">
-                    <Clock size={32} />
-                  </div>
-                  <div>
-                    <h4 className="mb-1 text-xl font-bold">Disponibilidade</h4>
-                    <p className="mb-1 text-gray-400">Operamos todos os dias do ano</p>
-                    <p className="flex items-center gap-2 font-bold text-white">
-                      <CheckCircle2 size={16} className="text-[#D4AF37]" />
-                      24 Horas / 7 Dias
-                    </p>
-                  </div>
-                </div>
               </div>
 
             </div>

@@ -16,9 +16,9 @@ import {
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
-import spinPhoto from "@/app/assets/photos/Foto spin na estrada.png";
 import frotaOutraFoto from "@/app/assets/photos/FROTA OUTRA FOTO.png";
 import vansPremiumPhoto from "@/app/assets/photos/frota-premium-aluguel-de-van-carros-executivos-locadora-pazuti.webp";
+import mtSpinFrotaPhoto from "@/app/assets/photos/MT SPIN FROTA.png";
 
 type FleetCategory = {
   title: string;
@@ -26,6 +26,7 @@ type FleetCategory = {
   description: string;
   image: string;
   imageAlt?: string;
+  imageClassName?: string;
   passengers: string;
   luggage: string;
   tags: string[];
@@ -51,8 +52,9 @@ const fleetCategories: FleetCategory[] = [
     subtitle: "Categoria para familias e pequenos grupos",
     description:
       "Opcao com maior capacidade de passageiros e bagagem, incluindo carros amplos como Spin e similares, conforme disponibilidade.",
-    image: spinPhoto,
-    imageAlt: "Foto de Spin gerada por IA, referenciada por mim e baseada em fato real",
+    image: mtSpinFrotaPhoto,
+    imageAlt: "MT Spin Frota",
+    imageClassName: "object-[center_78%]",
     passengers: "Ate 6 passageiros",
     luggage: "Ate 4/5 malas",
     tags: ["Familias", "Grupos", "Aeroporto", "Eventos"],
@@ -179,7 +181,7 @@ export function Fleet() {
                   <ImageWithFallback
                     src={category.image}
                     alt={category.imageAlt ?? category.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`h-full w-full object-cover ${category.imageClassName ?? "object-center"} transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                   <div className="absolute left-4 bottom-4 inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/40 bg-black/70 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#D9B44A]">

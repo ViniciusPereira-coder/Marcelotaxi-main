@@ -116,9 +116,7 @@ a {
 .whatsapp-cta:hover,
 .whatsapp-cta:focus-visible,
 .whatsapp-cta:active {
-  background: #000000 !important;
-  border-color: var(--color-gold) !important;
-  color: var(--color-gold) !important;
+  color: #000000 !important;
 }
 
 .glass-panel {

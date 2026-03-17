@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Shield, Target, Users2, Award, History, Building } from "lucide-react";
-import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
+import mtPngPhoto from "@/app/assets/photos/MT PNG.png";
 
 export function About() {
   return (
@@ -51,12 +51,12 @@ export function About() {
             <div className="relative">
               <div className="rounded-[40px] overflow-hidden">
                 <ImageWithFallback 
-                  src={SITE_IMAGES.corporate} 
+                  src={mtPngPhoto} 
                   className="w-full h-full object-cover" 
-                  alt="Taxi corporativo preto e branco" 
+                  alt="Foto MT em PNG" 
                 />
               </div>
-              <div className="absolute -bottom-10 -left-10 bg-[#0A0A0A] p-8 border border-[#D4AF37]/20 rounded-3xl hidden md:block">
+              <div className="absolute -bottom-16 -left-6 bg-[#0A0A0A] p-6 border border-[#D4AF37]/20 rounded-3xl hidden md:block">
                 <Award size={48} className="text-[#D4AF37] mb-4" />
                 <h4 className="font-bold text-xl mb-1">Top Rated</h4>
                 <p className="text-sm text-gray-500">Certificado de Excelência 2024</p>
@@ -76,12 +76,12 @@ export function About() {
             {[
               {
                 icon: <Shield className="text-[#D4AF37]" size={40} />,
-                title: "Segurança Primeiro",
+                title: "Segurança",
                 desc: "Segurança é um princípio operacional. Da manutenção preventiva à condução responsável, cada detalhe é tratado com rigor."
               },
               {
                 icon: <Target className="text-[#D4AF37]" size={40} />,
-                title: "Pontualidade Extrema",
+                title: "Pontualidade",
                 desc: "Valorizamos seu tempo com planejamento, acompanhamento da agenda e compromisso com horários."
               },
               {
