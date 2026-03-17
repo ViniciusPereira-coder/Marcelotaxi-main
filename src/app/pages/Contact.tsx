@@ -16,7 +16,7 @@ export function Contact() {
             Fale <span className="text-[#D4AF37]">Conosco</span>
           </motion.h1>
           <p className="mx-auto max-w-2xl text-xl text-gray-400">
-            Estamos disponiveis 24/7 para reservas, orcamentos e atendimentos personalizados.
+            Estamos disponíveis 24/7 para reservas, orçamentos e atendimentos personalizados.
           </p>
         </div>
       </section>
@@ -25,7 +25,7 @@ export function Contact() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-20 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 className="mb-10 text-3xl font-bold">Informacoes de Contato</h2>
+              <h2 className="mb-10 text-3xl font-bold">Informações de Contato</h2>
               <div className="mb-12 space-y-8">
                 <a href={COMPANY_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-6">
                   <div className="rounded-2xl bg-[#D4AF37]/10 p-4 text-[#D4AF37] transition-all group-hover:bg-[#D4AF37] group-hover:text-black">
@@ -33,7 +33,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="mb-1 text-xl font-bold">WhatsApp</h4>
-                    <p className="mb-1 text-gray-400">Reservas e cotacoes com resposta rapida</p>
+                    <p className="mb-1 text-gray-400">Reservas e cotações com resposta rápida</p>
                     <p className="font-bold text-[#D4AF37]">{COMPANY_INFO.phoneDisplay}</p>
                   </div>
                 </a>
@@ -43,7 +43,7 @@ export function Contact() {
                     <Phone size={32} />
                   </div>
                   <div>
-                    <h4 className="mb-1 text-xl font-bold">Ligacao Telefonica</h4>
+                    <h4 className="mb-1 text-xl font-bold">Ligação Telefônica</h4>
                     <p className="mb-1 text-gray-400">Atendimento direto 24 horas por dia</p>
                     <p className="font-bold text-white">{COMPANY_INFO.phoneDisplay}</p>
                   </div>
@@ -67,7 +67,7 @@ export function Contact() {
             <div className="h-fit self-start rounded-[40px] border border-white/5 bg-[#0A0A0A] p-10 md:p-16">
               <h2 className="mb-6 text-3xl font-bold">Atendimento Imediato</h2>
               <p className="mb-8 text-gray-400">
-                Para agilizar seu atendimento, fale direto no WhatsApp ou por ligacao. Assim alinhamos rota, horario e categoria ideal do servico.
+                Para agilizar seu atendimento, fale direto no WhatsApp ou por ligação. Assim alinhamos rota, horário e categoria ideal do serviço.
               </p>
 
               <div className="space-y-4">

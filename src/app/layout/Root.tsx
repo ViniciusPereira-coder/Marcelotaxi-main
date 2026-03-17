@@ -39,10 +39,10 @@ export function Root() {
             <img
               src={mtTransparentLogo}
               alt={`Logo ${COMPANY_INFO.brandName}`}
-              className="h-12 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
             <div>
-              <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
+              <span className="block font-['Cinzel'] text-[1.32rem] font-bold leading-none tracking-[0.08em] text-white uppercase">
                 {COMPANY_INFO.brandName}
               </span>
               {COMPANY_INFO.brandTagline ? (
@@ -171,10 +171,10 @@ export function Root() {
                 <img
                   src={mtTransparentLogo}
                   alt={`Logo ${COMPANY_INFO.brandName}`}
-                  className="h-10 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
                 <div>
-                  <span className="block text-lg font-black leading-none tracking-[0.08em] text-white">
+                  <span className="block font-['Cinzel'] text-[1.08rem] font-bold leading-none tracking-[0.08em] text-white uppercase">
                     {COMPANY_INFO.brandName}
                   </span>
                   {COMPANY_INFO.brandTagline ? (

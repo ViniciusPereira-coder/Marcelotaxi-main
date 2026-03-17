@@ -19,12 +19,12 @@ import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
 
 const EVENT_CONFIG = {
   name: "Lollapalooza Brasil",
-  season: "Edicao 2026",
-  city: "Sao Paulo",
-  venue: "Autodromo de Interlagos",
-  dates: "20, 21 e 22 de marco de 2026",
+  season: "Edição 2026",
+  city: "São Paulo",
+  venue: "Autódromo de Interlagos",
+  dates: "20, 21 e 22 de março de 2026",
   description:
-    "Atendimento dedicado para o Lollapalooza com reserva de ida, volta e pacote 3 dias, incluindo suporte rapido no WhatsApp.",
+    "Atendimento dedicado para o Lollapalooza com reserva de ida, volta e pacote de 3 dias, incluindo suporte rápido no WhatsApp.",
 };
 
 const OFFICIAL_LINKS = {
@@ -40,7 +40,7 @@ const FLYER_IMAGE =
 
 const eventDays = [
   { day: "Sexta", date: "20/03", focus: "Abertura oficial do festival", color: "from-[#16111f] to-[#3a294f]" },
-  { day: "Sabado", date: "21/03", focus: "Maior fluxo de publico", color: "from-[#2a1a3a] to-[#5c3f7b]" },
+  { day: "Sábado", date: "21/03", focus: "Maior fluxo de público", color: "from-[#2a1a3a] to-[#5c3f7b]" },
   { day: "Domingo", date: "22/03", focus: "Encerramento do evento", color: "from-[#3c2754] to-[#7f5ca6]" },
 ];
 
@@ -48,24 +48,24 @@ const packageOptions = [
   {
     title: "Pacote Ida",
     subtitle: "Chegada antecipada",
-    description: "Rota planejada para chegada antes da abertura dos portoes, sem correria.",
+    description: "Rota planejada para chegada antes da abertura dos portões, sem correria.",
   },
   {
     title: "Pacote Ida e Volta",
-    subtitle: "Operacao completa no dia",
-    description: "Retorno organizado no horario combinado para evitar filas e demora no fim dos shows.",
+    subtitle: "Operação completa no dia",
+    description: "Retorno organizado no horário combinado para evitar filas e demora no fim dos shows.",
   },
   {
     title: "Pacote 3 Dias",
     subtitle: "Prioridade total de agenda",
-    description: "Atendimento para os tres dias com planejamento previo e suporte continuo.",
+    description: "Atendimento para os três dias com planejamento prévio e suporte contínuo.",
   },
 ];
 
 const pickupPolicy = [
-  "Ponto de embarque definido com voce no WhatsApp, de acordo com regiao e horario",
-  "Ponto de retorno combinado durante o evento para mais seguranca",
-  "Atendimento para individual, casal, familia e grupos",
+  "Ponto de embarque definido com você no WhatsApp, de acordo com região e horário",
+  "Ponto de retorno combinado durante o evento para mais segurança",
+  "Atendimento para individual, casal, família e grupos",
 ];
 
 const suggestedRegions = [
@@ -77,16 +77,16 @@ const suggestedRegions = [
 ];
 
 const operationChecklist = [
-  "Confirmacao rapida no WhatsApp",
-  "Roteiro alinhado com horario do evento",
-  "Operacao 24/7 nos dias do festival",
+  "Confirmação rápida no WhatsApp",
+  "Roteiro alinhado com horário do evento",
+  "Operação 24/7 nos dias do festival",
   "Suporte para grupos e empresas",
 ];
 
 const quickLinks = [
   { label: "Site oficial", href: OFFICIAL_LINKS.home },
   { label: "Ingressos", href: OFFICIAL_LINKS.ingressos },
-  { label: "Line-up e horarios", href: OFFICIAL_LINKS.horarios },
+  { label: "Line-up e horários", href: OFFICIAL_LINKS.horarios },
   { label: "FAQ oficial", href: OFFICIAL_LINKS.information },
   { label: "Transportes oficiais", href: OFFICIAL_LINKS.transportes },
 ];
@@ -102,7 +102,7 @@ export function Events() {
         <title>Eventos | Lollapalooza Brasil | MarceloTaxi</title>
         <meta
           name="description"
-          content="Pagina de transporte para o Lollapalooza Brasil com reserva de ida, volta e pacote 3 dias."
+          content="Página de transporte para o Lollapalooza Brasil com reserva de ida, volta e pacote de 3 dias."
         />
       </Helmet>
 
@@ -121,7 +121,7 @@ export function Events() {
             >
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-black/25 bg-black px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#dff22e] shadow-[0_8px_24px_rgba(0,0,0,0.25)]">
                 <Music size={14} />
-                Pagina exclusiva do evento
+                Página exclusiva do evento
               </div>
 
               <h1 className="mb-5 text-4xl font-black leading-tight md:text-6xl">
@@ -133,7 +133,7 @@ export function Events() {
 
               <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
                 <div className="rounded-2xl border border-black/15 bg-white/72 px-4 py-3 shadow-[0_10px_30px_rgba(33,19,49,0.14)] backdrop-blur-sm">
-                  <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#5b3b7d]">Edicao</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#5b3b7d]">Edição</p>
                   <p className="mt-1 text-sm font-semibold">{EVENT_CONFIG.season}</p>
                 </div>
                 <div className="rounded-2xl border border-black/15 bg-white/72 px-4 py-3 shadow-[0_10px_30px_rgba(33,19,49,0.14)] backdrop-blur-sm">
@@ -184,14 +184,14 @@ export function Events() {
                   className="h-[430px] w-full object-cover object-top"
                 />
                 <div className="space-y-3 border-t border-white/15 bg-[linear-gradient(180deg,#0f0b16,#1b1230)] p-5 text-white">
-                  <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d7eb21]">Informacoes principais</p>
+                  <p className="text-xs font-black uppercase tracking-[0.18em] text-[#d7eb21]">Informações principais</p>
                   <p className="flex items-center gap-2 text-sm text-slate-200">
                     <MapPin size={16} className="text-[#d7eb21]" />
                     {EVENT_CONFIG.venue}
                   </p>
                   <p className="flex items-center gap-2 text-sm text-slate-200">
                     <Clock3 size={16} className="text-[#d7eb21]" />
-                    Horarios e line-up no link oficial
+                    Horários e line-up no link oficial
                   </p>
                 </div>
               </div>
@@ -248,13 +248,13 @@ export function Events() {
 
           <div className="space-y-6">
             <div className="rounded-3xl border border-black/15 bg-white/80 p-7 shadow-[0_14px_30px_rgba(33,19,49,0.12)]">
-              <h3 className="mb-2 flex items-center gap-2 text-2xl font-black">
-                <MapPin size={22} className="text-[#2a1a3a]" />
-                Embarque e retorno flexiveis
-              </h3>
-              <p className="mb-5 text-sm leading-relaxed text-[#3f2c56]">
-                Os pontos de embarque e retorno sao definidos na hora do atendimento no WhatsApp, de acordo com sua regiao e horario.
-              </p>
+            <h3 className="mb-2 flex items-center gap-2 text-2xl font-black">
+              <MapPin size={22} className="text-[#2a1a3a]" />
+              Embarque e retorno flexíveis
+            </h3>
+            <p className="mb-5 text-sm leading-relaxed text-[#3f2c56]">
+                Os pontos de embarque e retorno são definidos na hora do atendimento no WhatsApp, de acordo com sua região e horário.
+            </p>
               <ul className="space-y-3">
                 {pickupPolicy.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-[#2f2344]">
@@ -268,9 +268,9 @@ export function Events() {
             <div className="rounded-3xl border border-black/15 bg-white/80 p-7 shadow-[0_14px_30px_rgba(33,19,49,0.12)]">
               <h3 className="mb-4 flex items-center gap-2 text-2xl font-black">
                 <ShieldCheck size={22} className="text-[#2a1a3a]" />
-                Regioes mais solicitadas
+                Regiões mais solicitadas
               </h3>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-[#5b3b7d]">Referencia, nao limitado a estes pontos</p>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-[#5b3b7d]">Referência, não limitado a estes pontos</p>
               <div className="flex flex-wrap gap-2">
                 {suggestedRegions.map((region) => (
                   <span key={region} className="rounded-full border border-black/15 bg-[#f3ebf7] px-3 py-1 text-xs font-semibold text-[#2f2344]">
@@ -287,7 +287,7 @@ export function Events() {
         <div className="container mx-auto px-4">
           <div className="mb-8 flex items-center gap-3">
             <CheckCircle2 size={22} className="text-[#2a1a3a]" />
-            <h2 className="text-3xl font-black md:text-4xl">Checklist da operacao</h2>
+            <h2 className="text-3xl font-black md:text-4xl">Checklist da operação</h2>
           </div>
           <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-2">
             {operationChecklist.map((item) => (
@@ -317,7 +317,7 @@ export function Events() {
             ))}
           </div>
           <p className="mt-4 text-xs text-[#4b3665]">
-            Informacoes oficiais devem ser conferidas no site do Lollapalooza antes da compra.
+            Informações oficiais devem ser conferidas no site do Lollapalooza antes da compra.
           </p>
         </div>
       </section>

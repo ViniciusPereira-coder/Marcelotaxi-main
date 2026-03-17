@@ -16,9 +16,9 @@ import {
 import { COMPANY_INFO, COMPANY_LINKS } from "@/app/config/company";
 import { SITE_IMAGES } from "@/app/config/siteImages";
 import { ImageWithFallback } from "@/shared/media/ImageWithFallback";
+import spinPhoto from "@/app/assets/photos/MT SPIN FROTA.png";
 import frotaOutraFoto from "@/app/assets/photos/FROTA OUTRA FOTO.png";
 import vansPremiumPhoto from "@/app/assets/photos/frota-premium-aluguel-de-van-carros-executivos-locadora-pazuti.webp";
-import mtSpinFrotaPhoto from "@/app/assets/photos/MT SPIN FROTA.png";
 
 type FleetCategory = {
   title: string;
@@ -26,7 +26,6 @@ type FleetCategory = {
   description: string;
   image: string;
   imageAlt?: string;
-  imageClassName?: string;
   passengers: string;
   luggage: string;
   tags: string[];
@@ -36,54 +35,53 @@ type FleetCategory = {
 
 const fleetCategories: FleetCategory[] = [
   {
-    title: "Sedan Executivo",
-    subtitle: "Atendimento urbano e aeroportuario com conforto",
+    title: "Sedans Executivos",
+    subtitle: "Atendimento urbano e aeroportuário com conforto",
     description:
       "Categoria ideal para viagens individuais, casais e agendas corporativas com foco em pontualidade e conforto.",
     image: frotaOutraFoto,
-    passengers: "Ate 4 passageiros",
-    luggage: "Ate 2 malas",
-    tags: ["Aeroportos", "Corporativo", "Reunioes", "Hotel"],
+    passengers: "Até 4 passageiros",
+    luggage: "Até 2 malas",
+    tags: ["Aeroportos", "Corporativo", "Reuniões", "Hotel"],
     highlights: ["Ar-condicionado", "Motorista profissional", "Rota otimizada", "Conforto no deslocamento"],
     note: "Modelo exato confirmado no WhatsApp conforme disponibilidade.",
   },
   {
-    title: "Veiculos de Maior Capacidade",
-    subtitle: "Categoria para familias e pequenos grupos",
+    title: "Minivans Premium",
+    subtitle: "Categoria para famílias e pequenos grupos",
     description:
-      "Opcao com maior capacidade de passageiros e bagagem, incluindo carros amplos como Spin e similares, conforme disponibilidade.",
-    image: mtSpinFrotaPhoto,
-    imageAlt: "MT Spin Frota",
-    imageClassName: "object-[center_78%]",
-    passengers: "Ate 6 passageiros",
-    luggage: "Ate 4/5 malas",
-    tags: ["Familias", "Grupos", "Aeroporto", "Eventos"],
-    highlights: ["Espaco interno amplo", "Boa capacidade de bagagem", "Conforto para trajetos longos", "Ideal para grupos"],
-    note: "Configuracao interna pode variar conforme o veiculo disponivel.",
+      "Opção com maior capacidade de passageiros e bagagem, incluindo carros amplos como Spin e similares, conforme disponibilidade.",
+    image: spinPhoto,
+    imageAlt: "MT SPIN FROTA",
+    passengers: "Até 6 passageiros",
+    luggage: "Até 4/5 malas",
+    tags: ["Famílias", "Grupos", "Aeroporto", "Eventos"],
+    highlights: ["Espaço interno amplo", "Boa capacidade de bagagem", "Conforto para trajetos longos", "Ideal para grupos"],
+    note: "Configuração interna pode variar conforme o veículo disponível.",
   },
   {
-    title: "Veiculos Maiores",
+    title: "Veículos Maiores",
     subtitle: "Atendimento sob consulta para demandas especiais",
     description:
-      "Categoria para vans e veiculos maiores, com avaliacao da melhor configuracao conforme data, rota e quantidade de pessoas.",
+      "Categoria para vans e veículos maiores, com avaliação da melhor configuração conforme data, rota e quantidade de pessoas.",
     image: vansPremiumPhoto,
     passengers: "Capacidade sob consulta",
     luggage: "Bagagem sob consulta",
     tags: ["Grupos maiores", "Eventos", "Empresas", "Outros estados"],
-    highlights: ["Planejamento personalizado", "Atendimento para operacoes especiais", "Suporte dedicado", "Viabilidade por agenda"],
+    highlights: ["Planejamento personalizado", "Atendimento para operações especiais", "Suporte dedicado", "Viabilidade por agenda"],
     note: "Disponibilidade e categoria confirmadas no atendimento.",
   },
 ];
 
 const qualityPillars = [
-  "Confirmacao rapida no WhatsApp",
-  "Operacao 24/7 para servicos agendados",
-  "Padrao profissional de atendimento",
-  "Categoria do veiculo validada antes da reserva",
+  "Confirmação rápida no WhatsApp",
+  "Operação 24/7 para serviços agendados",
+  "Padrão profissional de atendimento",
+  "Categoria do veículo validada antes da reserva",
 ];
 
 const whatsappFleetLink = `${COMPANY_LINKS.whatsapp}?text=${encodeURIComponent(
-  "Oi! Quero saber qual categoria de veiculo e ideal para meu atendimento."
+  "Oi! Quero saber qual categoria de veículo é ideal para meu atendimento."
 )}`;
 
 export function Fleet() {
@@ -93,14 +91,14 @@ export function Fleet() {
         <title>Frota | MarceloTaxi</title>
         <meta
           name="description"
-          content="Categorias de frota executiva em Sao Paulo: sedans, carros amplos e vans sob consulta."
+          content="Categorias de frota executiva em São Paulo: sedans, carros amplos e vans sob consulta."
         />
       </Helmet>
 
       <section className="relative overflow-hidden border-b border-white/10 py-20 md:py-24">
         <ImageWithFallback
           src={SITE_IMAGES.fleet}
-          alt="Frota executiva em Sao Paulo"
+          alt="Frota executiva em São Paulo"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#05080f]/92 via-[#05080f]/78 to-[#05080f]/58" />
@@ -119,8 +117,8 @@ export function Fleet() {
             </div>
 
             <h1 className="mb-6 text-4xl font-black leading-tight md:text-6xl">
-              Veiculo certo para cada perfil
-              <span className="block text-[#D9B44A]">com confirmacao rapida no WhatsApp</span>
+              Veículo certo para cada perfil
+              <span className="block text-[#D9B44A]">com confirmação rápida no WhatsApp</span>
             </h1>
 
             <p className="mb-8 max-w-3xl text-lg text-slate-200 md:text-xl">
@@ -163,7 +161,7 @@ export function Fleet() {
               <h2 className="text-4xl font-black md:text-5xl">Como organizamos a frota</h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-slate-300 md:text-right">
-              Em vez de prometer modelo fixo, confirmamos a categoria ideal para seu atendimento com clareza e antecedencia.
+              Em vez de prometer modelo fixo, confirmamos a categoria ideal para seu atendimento com clareza e antecedência.
             </p>
           </div>
 
@@ -181,7 +179,9 @@ export function Fleet() {
                   <ImageWithFallback
                     src={category.image}
                     alt={category.imageAlt ?? category.title}
-                    className={`h-full w-full object-cover ${category.imageClassName ?? "object-center"} transition-transform duration-700 group-hover:scale-105`}
+                    className={`h-full w-full object-cover ${
+                      category.title === "Minivans Premium" ? "object-[center_78%]" : "object-center"
+                    } transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                   <div className="absolute left-4 bottom-4 inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/40 bg-black/70 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.08em] text-[#D9B44A]">
@@ -256,10 +256,10 @@ export function Fleet() {
           <div className="glass-panel rounded-3xl p-7">
             <h3 className="mb-5 flex items-center gap-2 text-2xl font-black">
               <ShieldCheck size={22} className="text-[#D9B44A]" />
-              Padrao de Atendimento
+              Padrão de Atendimento
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-slate-300">
-              Em qualquer categoria, seguimos o mesmo padrao de atendimento profissional para garantir previsibilidade e conforto.
+              Em qualquer categoria, seguimos o mesmo padrão de atendimento profissional para garantir previsibilidade e conforto.
             </p>
             <ul className="space-y-3">
               {qualityPillars.map((pillar) => (
@@ -277,12 +277,12 @@ export function Fleet() {
               Como Funciona
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-slate-300">
-              O processo e simples: voce informa o atendimento e nos indicamos a melhor categoria para o seu perfil.
+              O processo é simples: você informa o atendimento e nós indicamos a melhor categoria para o seu perfil.
             </p>
             <ul className="space-y-3 text-sm text-slate-200">
               <li className="flex items-start gap-2">
                 <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#D9B44A]" />
-                <span>Envie data, horario, origem e destino no WhatsApp</span>
+                <span>Envie data, horário, origem e destino no WhatsApp</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-[#D9B44A]" />

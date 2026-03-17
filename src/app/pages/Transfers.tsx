@@ -39,55 +39,55 @@ const transferServices: TransferService[] = [
     title: "Traslados de Aeroporto",
     subtitle: "Chegadas e partidas com monitoramento de voo",
     description:
-      "Operacao organizada para GRU, CGH e VCP com acompanhamento em tempo real, recepcao alinhada ao horario do voo e embarque sem correria.",
+      "Operação organizada para GRU, CGH e VCP com acompanhamento em tempo real, recepção alinhada ao horário do voo e embarque sem correria.",
     image: aeroportoCompanhias,
     icon: Plane,
     tags: ["Guarulhos (GRU)", "Congonhas (CGH)", "Viracopos (VCP)"],
-    benefits: ["Janela de espera inclusa", "Roteiro otimizado", "Motorista profissional", "Flexibilidade para ajustes de horario"],
+    benefits: ["Janela de espera inclusa", "Roteiro otimizado", "Motorista profissional", "Flexibilidade para ajustes de horário"],
   },
   {
     title: "Mobilidade Corporativa",
     subtitle: "Agenda executiva com previsibilidade",
     description:
-      "Atendimento para reunioes, roadshows e compromissos estrategicos, com pontualidade e suporte para rotas multiplas no mesmo dia.",
+      "Atendimento para reuniões, roadshows e compromissos estratégicos, com pontualidade e suporte para rotas múltiplas no mesmo dia.",
     image: berriniPhoto,
     icon: Building2,
     tags: ["Faria Lima", "Berrini", "Paulista", "Alphaville"],
-    benefits: ["Atendimento profissional", "Faturamento mensal", "Veiculos executivos", "Planejamento de agenda"],
+    benefits: ["Atendimento profissional", "Faturamento mensal", "Veículos executivos", "Planejamento de agenda"],
   },
   {
     title: "Litoral e Interior",
     subtitle: "Viagens longas com conforto",
     description:
-      "Deslocamentos para litoral e interior com operacao porta a porta, conforto de bordo e foco em seguranca durante todo o trajeto.",
+      "Deslocamentos para litoral e interior com operação porta a porta, conforto de bordo e foco em segurança durante todo o trajeto.",
     image: litoralPhoto,
     icon: Palmtree,
-    tags: ["Santos e Guaruja", "Ilhabela", "Campos do Jordao", "Sorocaba"],
-    benefits: ["Capacidade para bagagem", "Paradas programadas", "Pedagios no planejamento", "Conducao segura"],
+    tags: ["Santos e Guarujá", "Ilhabela", "Campos do Jordão", "Sorocaba"],
+    benefits: ["Capacidade para bagagem", "Paradas programadas", "Pedágios no planejamento", "Condução segura"],
   },
   {
     title: "Eventos e Datas Especiais",
-    subtitle: "Logistica completa para grupos e familias",
+    subtitle: "Logística completa para grupos e famílias",
     description:
-      "Coordenacao de transporte para eventos sociais e corporativos com embarque organizado, ponto de retorno definido e atendimento continuo.",
+      "Coordenação de transporte para eventos sociais e corporativos com embarque organizado, ponto de retorno definido e atendimento contínuo.",
     image: casamentoPhoto,
     icon: CalendarDays,
-    tags: ["Sao Paulo Capital", "Regiao Metropolitana", "Interior proximo"],
-    benefits: ["Equipe em prontidao", "Multiplos veiculos", "Pontos de encontro definidos", "Suporte no WhatsApp"],
+    tags: ["São Paulo Capital", "Região Metropolitana", "Interior próximo"],
+    benefits: ["Equipe em prontidão", "Múltiplos veículos", "Pontos de encontro definidos", "Suporte no WhatsApp"],
   },
 ];
 
 const operationPillars = [
-  "Confirmacao rapida do atendimento",
-  "Operacao 24/7 para viagens agendadas",
-  "Acompanhamento de transito e voo",
-  "Padrao visual e profissional da frota",
+  "Confirmação rápida do atendimento",
+  "Operação 24/7 para viagens agendadas",
+  "Acompanhamento de trânsito e voo",
+  "Padrão visual e profissional da frota",
 ];
 
 const coverageAreas = [
-  "Sao Paulo",
+  "São Paulo",
   "Aeroportos GRU, CGH e VCP",
-  "Bairros corporativos e hoteis",
+  "Bairros corporativos e hotéis",
   "Litoral norte, litoral sul e interior",
   "Atendimento para outros estados sob consulta",
 ];
@@ -99,14 +99,14 @@ export function Transfers() {
         <title>Traslados | MarceloTaxi</title>
         <meta
           name="description"
-          content="Traslados executivos em Sao Paulo com operacao profissional para aeroportos, corporativo, litoral, interior e eventos."
+          content="Traslados executivos em São Paulo com operação profissional para aeroportos, corporativo, litoral, interior e eventos."
         />
       </Helmet>
 
       <section className="relative overflow-hidden border-b border-white/10 py-20 md:py-24">
         <ImageWithFallback
           src={trasladoAviaoPousando}
-          alt="Traslado executivo em Sao Paulo"
+          alt="Traslado executivo em São Paulo"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#05080f]/92 via-[#05080f]/78 to-[#05080f]/55" />
@@ -121,14 +121,14 @@ export function Transfers() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/45 bg-[#D9B44A]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">
               <Clock3 size={14} />
-              Operacao Profissional 24/7
+              Operação Profissional 24/7
             </div>
             <h1 className="mb-6 text-4xl font-black leading-tight md:text-6xl">
               Traslados executivos com
               <span className="block text-[#D9B44A]">pontualidade, conforto e controle de rota</span>
             </h1>
             <p className="mb-10 max-w-3xl text-lg text-slate-200 md:text-xl">
-              Atendemos aeroportos, compromissos corporativos, viagens para litoral/interior e eventos com um padrao unico de atendimento, incluindo outros estados sob consulta.
+              Atendemos aeroportos, compromissos corporativos, viagens para litoral/interior e eventos com um padrão único de atendimento, incluindo outros estados sob consulta.
             </p>
 
             <div className="mb-10 flex flex-col gap-4 sm:flex-row">
@@ -157,7 +157,7 @@ export function Transfers() {
               </div>
               <div className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm">
                 <p className="font-black text-white">Corporativo</p>
-                <p className="text-slate-300">Rotas e agendas multiplas</p>
+                <p className="text-slate-300">Rotas e agendas múltiplas</p>
               </div>
               <div className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm">
                 <p className="font-black text-[#D9B44A]">Eventos</p>
@@ -172,11 +172,11 @@ export function Transfers() {
         <div className="container mx-auto px-4">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Nossos Servicos</p>
+              <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Nossos Serviços</p>
               <h2 className="text-4xl font-black md:text-5xl">O que oferecemos</h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-slate-300 md:text-right">
-              Cada servico foi desenhado para acelerar a decisao de compra: escopo claro, beneficios objetivos e acionamento imediato.
+              Cada serviço foi desenhado para acelerar a decisão de compra: escopo claro, benefícios objetivos e acionamento imediato.
             </p>
           </div>
 
@@ -249,10 +249,10 @@ export function Transfers() {
           <div className="glass-panel rounded-3xl p-7">
             <h3 className="mb-5 flex items-center gap-2 text-2xl font-black">
               <MapPin size={22} className="text-[#D9B44A]" />
-              Cobertura de Operacao
+              Cobertura de Operação
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-slate-300">
-              Atendimento em Sao Paulo e regiao com rotas planejadas para reduzir atrasos e manter previsibilidade de chegada.
+              Atendimento em São Paulo e região com rotas planejadas para reduzir atrasos e manter previsibilidade de chegada.
             </p>
             <ul className="space-y-3">
               {coverageAreas.map((area) => (
@@ -267,10 +267,10 @@ export function Transfers() {
           <div className="glass-panel rounded-3xl p-7">
             <h3 className="mb-5 flex items-center gap-2 text-2xl font-black">
               <ShieldCheck size={22} className="text-[#D9B44A]" />
-              Padrao de Atendimento
+              Padrão de Atendimento
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-slate-300">
-              Linguagem comercial objetiva, fluxo simples e foco total em conversao para atendimento imediato.
+              Linguagem comercial objetiva, fluxo simples e foco total em conversão para atendimento imediato.
             </p>
             <ul className="space-y-3">
               {operationPillars.map((pillar) => (
@@ -293,7 +293,7 @@ export function Transfers() {
                 Pronto para confirmar seu traslado?
               </h2>
               <p className="mx-auto mb-10 max-w-3xl text-lg font-semibold opacity-90 md:text-xl">
-                Receba retorno rapido no WhatsApp, valide a rota ideal e reserve seu transporte com atendimento profissional.
+                Receba retorno rápido no WhatsApp, valide a rota ideal e reserve seu transporte com atendimento profissional.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a

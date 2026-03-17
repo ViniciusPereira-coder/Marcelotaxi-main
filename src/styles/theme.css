@@ -20,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
   background: radial-gradient(circle at 8% -20%, #163668 0%, transparent 35%),
     radial-gradient(circle at 92% 0%, #2e2200 0%, transparent 30%), var(--color-bg);
   color: var(--color-text);
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sora", "Space Grotesk", system-ui, sans-serif;
+  font-family: "Noto Sans", system-ui, -apple-system, sans-serif;
 }
 
 a {

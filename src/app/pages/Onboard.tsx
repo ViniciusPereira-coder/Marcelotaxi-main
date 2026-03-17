@@ -28,31 +28,31 @@ type OnboardFeature = {
 const onboardFeatures: OnboardFeature[] = [
   {
     title: "Atendimento personalizado",
-    description: "Preferencias de bordo alinhadas no agendamento para uma experiencia mais sob medida.",
+    description: "Preferências de bordo alinhadas no agendamento para uma experiência mais sob medida.",
     icon: <Coffee size={20} />,
   },
   {
     title: "Ar-condicionado digital",
-    description: "Climatizacao ajustada para manter uma viagem agradavel em qualquer horario.",
+    description: "Climatização ajustada para manter uma viagem agradável em qualquer horário.",
     icon: <Snowflake size={20} />,
   },
   {
-    title: "Agua, sucos e bebidas",
-    description: "Opcoes de bebidas disponiveis conforme categoria e disponibilidade no atendimento.",
+    title: "Água, sucos e bebidas",
+    description: "Opções de bebidas disponíveis conforme categoria e disponibilidade no atendimento.",
     icon: <BatteryCharging size={20} />,
     note: "Itens confirmados no momento da reserva.",
   },
   {
     title: "Snacks e cereais a bordo",
-    description: "Selecao de snacks para uma experiencia de bordo mais completa.",
+    description: "Seleção de snacks para uma experiência de bordo mais completa.",
     icon: <Sparkles size={20} />,
   },
 ];
 
 const serviceStandards = [
-  "Atendimento profissional do inicio ao fim",
-  "Pontualidade e comunicacao clara",
-  "Operacao 24/7 para servicos agendados",
+  "Atendimento profissional do início ao fim",
+  "Pontualidade e comunicação clara",
+  "Operação 24/7 para serviços agendados",
   "Apoio para passageiros com bagagem",
 ];
 
@@ -63,33 +63,33 @@ const byCategory = [
   },
   {
     title: "Carros de Maior Capacidade",
-    description: "Mais espaco para familias e pequenos grupos.",
+    description: "Mais espaço para famílias e pequenos grupos.",
   },
   {
-    title: "Vans e Operacoes Especiais",
-    description: "Atendimento sob consulta para grupos maiores e demandas especificas.",
+    title: "Vans e Operações Especiais",
+    description: "Atendimento sob consulta para grupos maiores e demandas específicas.",
   },
 ];
 
 const whatsappOnboardLink = `${COMPANY_LINKS.whatsapp}?text=${encodeURIComponent(
-  "Oi! Quero saber os servicos de bordo disponiveis para minha reserva."
+  "Oi! Quero saber os serviços de bordo disponíveis para minha reserva."
 )}`;
 
 export function Onboard() {
   return (
     <div className="flex flex-col bg-[#05080f]">
       <Helmet>
-        <title>Servicos de Bordo | MarceloTaxi</title>
+        <title>Serviços de Bordo | MarceloTaxi</title>
         <meta
           name="description"
-          content="Servicos de bordo da MarceloTaxi com foco em conforto, atendimento profissional e experiencia executiva."
+          content="Serviços de bordo da MarceloTaxi com foco em conforto, atendimento profissional e experiência executiva."
         />
       </Helmet>
 
       <section className="relative overflow-hidden border-b border-white/10 py-20 md:py-24">
         <ImageWithFallback
           src={servicoDeBordoPhoto}
-          alt="Servico executivo com conforto de bordo"
+          alt="Serviço executivo com conforto de bordo"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#05080f]/92 via-[#05080f]/78 to-[#05080f]/55" />
@@ -104,14 +104,14 @@ export function Onboard() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/45 bg-[#D9B44A]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">
               <Sparkles size={14} />
-              Experiencia de bordo
+              Experiência de bordo
             </div>
             <h1 className="mb-6 text-4xl font-black leading-tight md:text-6xl">
               Conforto, cuidado e
-              <span className="block text-[#D9B44A]">padrao executivo em cada trajeto</span>
+              <span className="block text-[#D9B44A]">padrão executivo em cada trajeto</span>
             </h1>
             <p className="mb-10 max-w-3xl text-lg text-slate-200 md:text-xl">
-              Os servicos de bordo sao pensados para elevar sua experiencia de translado com praticidade, conforto e atencao aos detalhes.
+              Os serviços de bordo são pensados para elevar sua experiência de translado com praticidade, conforto e atenção aos detalhes.
             </p>
 
             <div className="mb-10 flex flex-col gap-4 sm:flex-row">
@@ -122,7 +122,7 @@ export function Onboard() {
                 className="whatsapp-cta inline-flex items-center justify-center gap-2 rounded-full border border-[#D9B44A] bg-[#D9B44A] px-8 py-4 text-sm font-black uppercase tracking-[0.08em] text-black transition-all hover:-translate-y-0.5 hover:bg-[#c79d36]"
               >
                 <MessageCircle size={18} />
-                Ver servicos de bordo
+                Ver serviços de bordo
               </a>
               <a
                 href={COMPANY_LINKS.phone}
@@ -140,11 +140,11 @@ export function Onboard() {
         <div className="container mx-auto px-4">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Servicos</p>
+              <p className="mb-3 text-xs font-black uppercase tracking-[0.2em] text-[#D9B44A]">Serviços</p>
               <h2 className="text-4xl font-black md:text-5xl">O que oferecemos a bordo</h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-slate-300 md:text-right">
-              Cada item foi definido para melhorar a experiencia do passageiro sem perder agilidade no atendimento.
+              Cada item foi definido para melhorar a experiência do passageiro sem perder agilidade no atendimento.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export function Onboard() {
               >
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D9B44A]/40 bg-[#D9B44A]/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.08em] text-[#D9B44A]">
                   {item.icon}
-                  Servico
+                  Serviço
                 </div>
                 <h3 className="mb-3 text-2xl font-black">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-slate-300">{item.description}</p>
@@ -176,10 +176,10 @@ export function Onboard() {
           <div className="glass-panel rounded-3xl p-7">
             <h3 className="mb-5 flex items-center gap-2 text-2xl font-black">
               <ShieldCheck size={22} className="text-[#D9B44A]" />
-              Padrao de Atendimento
+              Padrão de Atendimento
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-slate-300">
-              Mantemos o mesmo nivel de qualidade em qualquer categoria de veiculo para garantir consistencia na experiencia.
+              Mantemos o mesmo nível de qualidade em qualquer categoria de veículo para garantir consistência na experiência.
             </p>
             <ul className="space-y-3">
               {serviceStandards.map((item) => (
@@ -220,7 +220,7 @@ export function Onboard() {
                 Pronto para reservar seu atendimento?
               </h2>
               <p className="mx-auto mb-10 max-w-3xl text-lg font-semibold opacity-90 md:text-xl">
-                Chame no WhatsApp e confira quais itens de bordo estao disponiveis para sua viagem.
+                Chame no WhatsApp e confira quais itens de bordo estão disponíveis para sua viagem.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a
